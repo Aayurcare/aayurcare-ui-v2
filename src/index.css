@@ -14,3 +14,10 @@ code {
 .text-secondary{
   color: #b3b3b3;
 }
+
+.text-blue {
+  padding: 0;
+  margin: 0;
+  color: #114DD2;
+  display: inline-block;
+}
