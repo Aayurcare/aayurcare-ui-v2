@@ -1,15 +1,15 @@
 .container{
     display: flex;
     flex-direction: row;
-    padding: 80px;
-    height: 70vh;
+
+    height: 100vh;
 }
 
 .left{
     display: flex;
     align-items: start;
     flex-direction: column;
-
+    height: 100vh;
 }
 
 .title{
@@ -21,6 +21,10 @@
 .coloredText {
     color: #114DD2;
 }
+.right{
+    padding-top: 70px;
+}
+
 .image{
-    height: 60vh;
+    height: 90vh;
 }

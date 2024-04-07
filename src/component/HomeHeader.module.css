@@ -8,6 +8,10 @@
     align-items: center;
 }
 
+.logo{
+    width: 160px;
+}
+
 .middleSection {
     display: flex;
     flex-direction: row;
@@ -22,4 +26,7 @@
 .userIcon{
     height: 35px;
     width: 35px;
+}
+.menuItem:hover{
+    cursor: pointer;
 }

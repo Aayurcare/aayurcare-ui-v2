@@ -1,0 +1,43 @@
+.footerContainer{
+    background-color: #002679;
+    color: white;
+}
+
+.topSection{
+    padding: 20px;
+    display: flex;
+    font-size: 14px;
+    flex-direction: row;
+}
+.footerDivision{
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 80px;
+    flex-direction: column;
+}
+
+.logo{
+    height: 60px;
+    width: 230px;
+    margin-top: 30px;
+}
+.bottomSection{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 20px 5px 20px;
+}
+
+hr{
+    width: 80%;
+    background-color: #c4c4c4;
+}
+
+.socialMediaIcon{
+    margin: 5px;
+}
+
+.socialMediaIcon:hover{
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+}

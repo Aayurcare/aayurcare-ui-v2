@@ -1,16 +1,17 @@
 import styles from "./HomeHeader.module.css";
 import UserIcon from "../assets/icons/svgjs/UserIcon";
+import Logo from "../assets/icons/logo_light_bg.svg";
 const HomeHeader = () => {
   return (
     <header className={styles.header}>
-      <h4>LOGO</h4>
+      <img src={Logo} className={styles.logo} />
       <section className={styles.middleSection}>
-        <p>Home</p>
-        <p>About Us</p>
-        <p>Services</p>
-        <p>Career</p>
-        <p>Blog</p>
-        <p>Help</p>
+        <p className={styles.menuItem}>Home</p>
+        <p className={styles.menuItem}>About Us</p>
+        <p className={styles.menuItem}>Services</p>
+        <p className={styles.menuItem}>Career</p>
+        <p className={styles.menuItem}>Blog</p>
+        <p className={styles.menuItem}>Help</p>
       </section>
       <UserIcon />
     </header>

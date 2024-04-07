@@ -6,26 +6,19 @@ import styles from "./VitalLinks.module.css";
 //Images
 import NACO from "../../../../assets/images/home/NACO.png";
 import NHM from "../../../../assets/images/home/NationalHealthMission.png";
+import { SectionContainerRight } from "../SectionContainer";
 
 const VitalLinks = () => {
   return (
-    <div className={backgroundStyles.section1Container}>
-      <div>
-        <img
-          className={backgroundStyles.backgroundImage}
-          src={BackgroundVector}
-        />
+    <SectionContainerRight>
+      <div className={styles.contentSubContainer}>
+        <p className={styles.title}>
+          Vital Links: Ensuring Your<br></br> Wellbeing is{" "}
+          <span className="text-blue">Our Promise.</span>
+        </p>
+        <CardSection />
       </div>
-      <div className={backgroundStyles.contentContainer}>
-        <div className={styles.contentSubContainer}>
-          <p className={styles.title}>
-            Vital Links: Ensuring Your<br></br> Wellbeing is{" "}
-            <span className="text-blue">Our Promise.</span>
-          </p>
-          <CardSection />
-        </div>
-      </div>
-    </div>
+    </SectionContainerRight>
   );
 };
 

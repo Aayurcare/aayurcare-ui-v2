@@ -9,26 +9,22 @@ import Banner from "../../../../assets/images/home/Group asset grid.png";
 import DoctorConsultImage from "../../../../assets/images/home/doctor_consult.png";
 import DiagnosticImage from "../../../../assets/images/home/diagnostic.png";
 import OnlineMedicineImage from "../../../../assets/images/home/online_medicine.png";
+import {
+  SectionContainerLeft,
+  SectionContainerRight,
+} from "../SectionContainer";
 
 const ServicesOffer = () => {
   return (
-    <div className={backgroundStyles.section1Container}>
-      <div>
-        <img
-          className={backgroundStyles.backgroundImage}
-          src={BackgroundVector}
-        />
+    <SectionContainerLeft>
+      <div className={styles.contentSubContainer}>
+        <img src={Banner} className={styles.topBannerImage} />
+        <p className={styles.title}>
+          We offer a range of <span className="text-blue">services</span>
+        </p>
+        <CardSection />
       </div>
-      <div className={backgroundStyles.contentContainer}>
-        <div className={styles.contentSubContainer}>
-          <img src={Banner} className={styles.topBannerImage} />
-          <p className={styles.title}>
-            We offer a range of <span className="text-blue">services</span>
-          </p>
-          <CardSection />
-        </div>
-      </div>
-    </div>
+    </SectionContainerLeft>
   );
 };
 

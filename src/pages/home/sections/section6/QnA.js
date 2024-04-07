@@ -6,28 +6,23 @@ import Collapsible from "react-collapsible";
 import Collapse from "../../../../assets/images/home/qna/collapse.jpg";
 import Expand from "../../../../assets/images/home/qna/expand.jpg";
 import GroupProfiles from "../../../../assets/images/home/qna/group_profiles.png";
+import {
+  SectionContainerLeft,
+  SectionContainerRight,
+} from "../SectionContainer";
 const QnA = () => {
   return (
-    <div className={backgroundStyles.section1Container}>
-      <div>
-        <img
-          className={backgroundStyles.backgroundImage}
-          src={BackgroundVector}
-        />
+    <SectionContainerRight>
+      <div className={styles.contentSubContainer}>
+        <p className={styles.title}>
+          Answers To Your Most Common <br></br>Questions:{" "}
+          <span className="text-blue">FAQ</span>
+        </p>
+        <CollapsibleSection />
+        <ProfileSection />
+        <CallbackCard />
       </div>
-      <div className={backgroundStyles.contentContainer}>
-        <div className={styles.contentSubContainer}>
-          <p className={styles.title}>
-            Answers To Your Most Common <br></br>Questions:{" "}
-            <span className="text-blue">FAQ</span>
-          </p>
-
-          <CollapsibleSection />
-          <ProfileSection />
-          <CallbackCard />
-        </div>
-      </div>
-    </div>
+    </SectionContainerRight>
   );
 };
 
@@ -175,7 +170,23 @@ const CallbackCard = () => {
           type="number"
           placeholder="Mobile number"
         />
-        <input type="checkbox" placeholder="Also whatsapp number" />
+        <span
+          style={{
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+          }}
+        >
+          <input
+            type="checkbox"
+            placeholder="Also whatsapp number"
+            value="Also whatsapp number"
+            name="check"
+          />
+          <label for="check" style={{ fontSize: "12px", color: "#666666" }}>
+            Also whatsapp number
+          </label>
+        </span>
         <button className={styles.buttonRequest}>Request Call</button>
       </aside>
     </div>
