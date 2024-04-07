@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 
-import Logo from "../../../assets/icons/aayurcare_sm.png";
+import Logo from "../../../assets/icons/logo_dark_bg.svg";
 import EmailIcon from "../../../assets/icons/email_icon.svg";
 import LocationIcon from "../../../assets/icons/location_icon.svg";
 

@@ -2,9 +2,9 @@ import backgroundStyles from "./BackgroundStyles.module.css";
 import BackgroundVectorRight from "../../../assets/images/home/vector1.png";
 import BackgroundVectorLeft from "../../../assets/images/home/vector2.png";
 
-const SectionContainerLeft = ({ children }) => {
+const SectionContainerLeft = ({ children, styles }) => {
   return (
-    <div className={backgroundStyles.section1Container}>
+    <div className={backgroundStyles.section1Container} style={styles}>
       <div>
         <img
           className={backgroundStyles.backgroundImage}
@@ -16,7 +16,7 @@ const SectionContainerLeft = ({ children }) => {
   );
 };
 
-const SectionContainerRight = ({ children }) => {
+const SectionContainerRight = ({ children, styles }) => {
   return (
     <div className={backgroundStyles.section1Container}>
       <div>

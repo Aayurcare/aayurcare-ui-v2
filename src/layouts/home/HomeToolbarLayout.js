@@ -1,10 +1,10 @@
 import React from "react";
 import HomeHeader from "../../component/HomeHeader";
 
-const HomeToolbarLayout = ({ children }) => {
+const HomeToolbarLayout = ({ children, highlighted }) => {
   return (
     <div>
-      <HomeHeader>sss</HomeHeader>
+      <HomeHeader highlighted={highlighted}></HomeHeader>
       {children}
     </div>
   );

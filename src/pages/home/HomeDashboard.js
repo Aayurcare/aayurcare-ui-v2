@@ -14,7 +14,7 @@ const HomeDashboard = () => {
     secondBackground: {},
   };
   return (
-    <HomeToolbarLayout>
+    <HomeToolbarLayout highlighted={0}>
       <LandingHomeSection />
       <CustomizeHealthPlan />
       <WhyAayurCare />

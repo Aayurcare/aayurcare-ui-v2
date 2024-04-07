@@ -1,0 +1,67 @@
+
+
+.enquiryCard{
+    background: rgba(255, 255, 255, 0.718);
+    z-index: 10;
+    border-radius: 20px;
+    text-align: center;
+    width: 85%;
+    border: 1px solid  #E3E3E3;
+    padding: 20px;
+    align-self: center;
+  }
+  .asideImageEnquiry{
+    width: 100%;
+  }
+  .subSectionEnquiry{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .enquiryTitle{
+    font-size: 30px;
+  }
+
+  .enquiryNameInput{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .nameInput{
+    width: 100px;
+  }
+
+  .inputSection{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+  }
+
+  input{
+    margin-bottom: 20px;
+    background: #E5EBF8;
+    height: 40px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px 10px 15px;
+  }
+  button{
+    height: 50px;
+    background: linear-gradient(90deg, rgba(17,77,210,1) 19%, rgba(72,111,250,1) 100%);
+    border: none;
+    color: white;
+    border-radius: 16px;
+    width: 40%;
+    align-self: center;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }

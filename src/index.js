@@ -5,11 +5,36 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomeDashboard from "./pages/home/HomeDashboard";
 import { Helmet } from "react-helmet";
+import AboutUs from "./pages/aboutus/AboutUs";
+import Services from "./pages/services/Services";
+import Career from "./pages/career/Career";
+import Blog from "./pages/blog/Blog";
+import Help from "./pages/help/Help";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeDashboard />,
+  },
+  {
+    path: "/about-us",
+    element: <AboutUs />,
+  },
+  {
+    path: "/services",
+    element: <Services />,
+  },
+  {
+    path: "/career",
+    element: <Career />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
+  },
+  {
+    path: "/help",
+    element: <Help />,
   },
 ]);
 
@@ -17,6 +42,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Helmet>
+      <title>Aayurcare</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
