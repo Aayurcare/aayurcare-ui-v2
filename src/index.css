@@ -1,11 +1,16 @@
 body {
   margin: 0;
-  font-family:  'Work Sans';
+  font-family: "Poppins", sans-serif;
   src: url("./assets/fonts/WorkSans-Regular.ttf") format("ttf");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  color: #000000;
+  font-style: normal;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

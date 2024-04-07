@@ -1,8 +1,9 @@
 import HomeToolbarLayout from "../../layouts/home/HomeToolbarLayout";
 import CustomizeHealthPlan from "./sections/section1/CustomizeHealthPlan";
 import LandingHomeSection from "./sections/LandingHomeSection";
-import ServicesOffer from "./sections/ServicesOffer";
+import ServicesOffer from "./sections/section3/ServicesOffer";
 import WhyAayurCare from "./sections/section2/WhyAayurCare";
+import VitalLinks from "./sections/section4/VitalLinks";
 
 const HomeDashboard = () => {
   const styles = {
@@ -15,6 +16,7 @@ const HomeDashboard = () => {
       <CustomizeHealthPlan />
       <WhyAayurCare />
       <ServicesOffer />
+      <VitalLinks />
     </HomeToolbarLayout>
   );
 };

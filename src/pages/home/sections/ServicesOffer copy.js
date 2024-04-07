@@ -1,6 +1,6 @@
 import React from "react";
-import BackgroundVector from "../../../assets/images/home/vector2.png";
-import backgroundStyles from "./BackgroundStyles.module.css";
+import BackgroundVector from "../../../../assets/images/home/vector2.png";
+import backgroundStyles from "./../BackgroundStyles.module.css";
 const ServicesOffer = () => {
   return (
     <div className={backgroundStyles.section1Container}>
@@ -11,7 +11,7 @@ const ServicesOffer = () => {
         />
       </div>
       <div className={backgroundStyles.contentContainer}>
-        inside why WhyAayurCare
+        inside why ServicesOffer
       </div>
     </div>
   );
