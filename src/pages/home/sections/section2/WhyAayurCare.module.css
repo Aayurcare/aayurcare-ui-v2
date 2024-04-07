@@ -1,0 +1,47 @@
+.contentSubContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 60px;
+    margin-right: 60px;
+    height: 100vh;
+    align-self: center;
+    justify-content: left;
+    max-width: 1400px;
+    align-items: start;
+}
+.tableItems{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-self: center;
+    margin-top: 8vh;
+}
+.whyAayurTitle{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.rightElement,.leftElement{
+    width: 35%;
+    position: relative;
+}
+
+.rightElement{
+    align-self: flex-end;
+}
+
+.innerNumber{
+    position: absolute;
+    font-size: 55px;
+    margin: 0;
+    padding: 0;
+    top: -20px;
+    left: -10px;
+    font-weight: 700;
+    color: rgba(17, 77, 210, .1);
+}
+
+.innerText{
+    font-weight: 500;
+}
