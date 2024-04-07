@@ -1,0 +1,25 @@
+.header{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    align-items: center;
+}
+
+.middleSection {
+    display: flex;
+    flex-direction: row;
+    width: 635px;
+    justify-content: space-between;
+}
+
+.sectionItem{
+    margin-left: 10px;
+}
+
+.userIcon{
+    height: 35px;
+    width: 35px;
+}
