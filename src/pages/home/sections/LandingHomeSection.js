@@ -1,4 +1,4 @@
-import FamilyImage from "../../../assets/images/home/page1_right_family.png";
+import FamilyImage from "../../../assets/images/home/family.png";
 import ButtonPrimary from "../../../component/elements/button/ButtonPrimary";
 import styles from "./LandingHomeSection.module.css";
 
@@ -16,7 +16,7 @@ const LandingHomeSection = () => {
         <ButtonPrimary content={"Learn More"} />
       </section>
       <section className={styles.right}></section>
-      <img src={FamilyImage} alt="Family image" />
+      <img src={FamilyImage} alt="Family image" className={styles.image} />
     </div>
   );
 };

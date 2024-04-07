@@ -1,4 +1,4 @@
-import styles from "./ButtonPrimary.module.css";
+import styles from "./Button.module.css";
 
 const ButtonPrimary = ({ content }) => {
   return <button className={styles.button}>{content}</button>;

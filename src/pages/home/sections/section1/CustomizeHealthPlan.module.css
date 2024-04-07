@@ -1,0 +1,51 @@
+.cardItem {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.6px);
+    -webkit-backdrop-filter: blur(9.6px);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+
+
+    width: 30vh;
+    flex-direction: column;
+    border-radius: 20px;
+    display: flex;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: red 1px 2px;
+    margin-left : 20px;
+    margin-bottom: 30px;
+    max-width: 33%;
+    max-height: 33%;
+    font-size: 19px;
+    height: 30vh;
+    justify-content: space-evenly;
+}
+.cardTitle{
+    font-weight: 500;
+    margin-bottom: 0;
+    align-self: flex-start;
+}
+
+.cardButton{
+    align-self: center;
+    justify-self: center;
+}
+.textArticle {
+    font-size: 35px;
+    align-items: start;
+    width: 35vh;
+}
+.contentSubContainer {
+    width: 80%;
+    align-self: center;
+    padding: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
