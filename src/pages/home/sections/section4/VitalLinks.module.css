@@ -1,0 +1,45 @@
+.contentSubContainer{
+    position: relative;
+    margin-top: 15%;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardSection{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardItem{
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #EDEDED;
+    border-radius: 16px;
+    height: 400px;
+    text-overflow: ellipsis;
+}
+
+.cardImage{
+    width: 80px;
+    margin-top: 30px;
+}
+
+.title{
+    font-size: 37px;
+}
+.cardTitle{
+    height: 90px;
+    font-size: 27px;
+}
+.description{
+    text-overflow: ellipsis;
+}

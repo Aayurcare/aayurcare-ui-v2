@@ -1,6 +1,6 @@
 .contentSubContainer{
     display: flex;
-    margin-top: 15%;
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
     padding-left: 80px;
@@ -26,7 +26,7 @@
 }
 
 .card{
-    height: 73vh;
+    height: 550px;
     border: 1px solid #cccccc;
     border-radius: 16px;
     display: flex;
@@ -39,10 +39,12 @@
 }
 
 .cardBody{
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 10px;
 }
 
 .cardImage{
@@ -79,4 +81,5 @@
     width: 20vw;
     font-size: 16px;
     padding: 15px;
+    /* flex : 1 1 auto; */
 }
