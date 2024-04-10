@@ -1,8 +1,12 @@
-
-
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .enquiryCard{
     background: rgba(255, 255, 255, 0.718);
     z-index: 10;
+    margin-top: 40px;
     border-radius: 20px;
     text-align: center;
     width: 85%;
@@ -64,4 +68,28 @@
 
   button:hover{
     cursor: pointer;
+  }
+
+  .cardSection{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    width: 100%;
+    font-size: 14px;
+    flex-direction: row;
+  }
+
+  .cardItem{
+    text-align: center;
+    padding: 10px 8px 10px 8px;
+    width: 25%;
+    background-color: #ffffffc9;
+    border: 1px solid #E3E3E3;
+    z-index: 10;
+    border-radius: 16px;
+  }
+
+  .active{
+    color: white;
+    background-color: rgba(17,77,210,1);
   }

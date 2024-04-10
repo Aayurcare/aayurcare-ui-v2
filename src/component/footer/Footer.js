@@ -1,13 +1,13 @@
 import styles from "./Footer.module.css";
 
-import Logo from "../../../assets/icons/logo_dark_bg.svg";
-import EmailIcon from "../../../assets/icons/email_icon.svg";
-import LocationIcon from "../../../assets/icons/location_icon.svg";
+import Logo from "../../assets/icons/logo_dark_bg.svg";
+import EmailIcon from "../../assets/icons/email_icon.svg";
+import LocationIcon from "../../assets/icons/location_icon.svg";
 
-import FacebookIcon from "../../../assets/icons/facebook.svg";
-import TwitterIcon from "../../../assets/icons/twitter.svg";
-import LinkedinIcon from "../../../assets/icons/linkedin.svg";
-import InstagramIcon from "../../../assets/icons/instagram.svg";
+import FacebookIcon from "../../assets/icons/facebook.svg";
+import TwitterIcon from "../../assets/icons/twitter.svg";
+import LinkedinIcon from "../../assets/icons/linkedin.svg";
+import InstagramIcon from "../../assets/icons/instagram.svg";
 
 const Footer = () => {
   return (

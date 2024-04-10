@@ -6,7 +6,10 @@ import FranchiseEnquiryImg from "../../../assets/images/aboutus/franchise_enquir
 const FranchiseEnquirySection = () => {
   return (
     <SectionContainerRight>
-      <EnquiryCard />
+      <div className={styles.container}>
+        <EnquiryCard />
+        <Cards />
+      </div>
     </SectionContainerRight>
   );
 };
@@ -48,6 +51,33 @@ const EnquiryCard = () => {
         </section>
       </section>
     </div>
+  );
+};
+
+const Cards = () => {
+  return (
+    <section className={styles.cardSection}>
+      <article className={styles.cardItem + " " + styles.active}>
+        <p className={styles.cardTitle}>Hex Integrated Claim Stack</p>
+        <p className={styles.cardTitle}>
+          Streamlining claims processing with comprehensive integration and
+          efficiency
+        </p>
+      </article>
+      <article className={styles.cardItem}>
+        <p className={styles.cardTitle}>Digital Health Hub</p>
+        <p className={styles.cardTitle}>
+          Your centralized platform for modern healthcare solutions and
+          resources.
+        </p>
+      </article>
+      <article className={styles.cardItem}>
+        <p className={styles.cardTitle}>Aayurcare Partner</p>
+        <p className={styles.cardTitle}>
+          Partnering with insurance for holistic healthcare solutions.
+        </p>
+      </article>
+    </section>
   );
 };
 

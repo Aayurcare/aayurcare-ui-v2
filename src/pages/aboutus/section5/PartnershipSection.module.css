@@ -1,0 +1,29 @@
+.container{
+    margin-top: 100px;
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+}
+
+.contentSection{
+    display: flex;
+    border-radius: 16px;
+
+    background-color: white;
+    padding: 40px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+ol{
+    text-align: start;
+}
+.partnershipImg{
+    margin-left: 10px;
+    width: 50%;
+}
+.listTitle{
+    font-weight: 600;
+}
+li:before{
+    font-weight: 600;
+}

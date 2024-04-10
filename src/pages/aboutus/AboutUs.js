@@ -9,6 +9,8 @@ import {
 import JoinUsSection from "./section2/JoinUsSection";
 import JourneySection from "./section3/JourneySection";
 import FranchiseEnquirySection from "./section4/FranchiseEnquirySection";
+import PartnershipSection from "./section5/PartnershipSection";
+import Footer from "../../component/footer/Footer";
 
 const AboutUs = () => {
   return (
@@ -54,6 +56,8 @@ const AboutUs = () => {
       <JoinUsSection />
       <JourneySection />
       <FranchiseEnquirySection />
+      <PartnershipSection />
+      <Footer />
     </HomeToolbarLayout>
   );
 };

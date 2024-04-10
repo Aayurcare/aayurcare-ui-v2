@@ -6,7 +6,7 @@ import WhyAayurCare from "./sections/section2/WhyAayurCare";
 import VitalLinks from "./sections/section4/VitalLinks";
 import WordsOfTrust from "./sections/section5/WordsOfTrust";
 import QnA from "./sections/section6/QnA";
-import Footer from "./sections/Footer";
+import Footer from "../../component/footer/Footer";
 
 const HomeDashboard = () => {
   const styles = {
