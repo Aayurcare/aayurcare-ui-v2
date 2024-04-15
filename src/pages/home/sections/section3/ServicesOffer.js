@@ -72,4 +72,6 @@ const ServicesCard = ({ image, title, description }) => {
   );
 };
 
+export { CardSection };
+
 export default ServicesOffer;

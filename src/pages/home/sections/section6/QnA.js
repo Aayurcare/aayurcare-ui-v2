@@ -193,4 +193,6 @@ const CallbackCard = () => {
   );
 };
 
+export { CallbackCard };
+
 export default QnA;

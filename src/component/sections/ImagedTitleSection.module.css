@@ -1,0 +1,19 @@
+.firstContainer{
+    display: flex;
+    /* position: absolute; */
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+}
+.firstContainerBackground{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.fistCenterText{
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    font-size: 55px;
+}

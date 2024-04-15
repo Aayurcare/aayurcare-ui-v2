@@ -11,11 +11,16 @@ import JourneySection from "./section3/JourneySection";
 import FranchiseEnquirySection from "./section4/FranchiseEnquirySection";
 import PartnershipSection from "./section5/PartnershipSection";
 import Footer from "../../component/footer/Footer";
+import ImagedTitleSection from "../../component/sections/ImagedTitleSection";
 
 const AboutUs = () => {
   return (
     <HomeToolbarLayout highlighted={1}>
-      <DiscoverMore />
+      <ImagedTitleSection
+        backgroundImage={BackgroundImage}
+        pre_title={"Discover more "}
+        highlighted={"about us."}
+      />
       <SectionContainerLeft styles={{ marginTop: "20vh", zIndex: -2 }}>
         <div className={styles.whoWeAreSection}>
           <p className={styles.title + " text-blue"}>Who we are ?</p>
@@ -62,22 +67,22 @@ const AboutUs = () => {
   );
 };
 
-const DiscoverMore = () => {
-  return (
-    <div className={styles.firstContainer}>
-      <img
-        src={BackgroundImage}
-        alt="discover-more"
-        className={styles.firstContainerBackground}
-      />
-      <h6
-        className={styles.fistCenterText}
-        style={{ alignSelf: "center", justifySelf: "center" }}
-      >
-        Discover more <span className="text-blue">about us.</span>
-      </h6>
-    </div>
-  );
-};
+// const DiscoverMore = () => {
+//   return (
+//     <div className={styles.firstContainer}>
+//       <img
+//         src={BackgroundImage}
+//         alt="discover-more"
+//         className={styles.firstContainerBackground}
+//       />
+//       <h6
+//         className={styles.fistCenterText}
+//         style={{ alignSelf: "center", justifySelf: "center" }}
+//       >
+//         Discover more <span className="text-blue">about us.</span>
+//       </h6>
+//     </div>
+//   );
+// };
 
 export default AboutUs;

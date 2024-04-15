@@ -46,3 +46,12 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+
+.title{
+  font-size: 45px;
+}
+
+.subTitle{
+  font-size: 35px;
+}
