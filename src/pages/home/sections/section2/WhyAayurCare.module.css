@@ -44,3 +44,15 @@
 .innerText{
     font-weight: 500;
 }
+
+@media only screen and (max-width: 550px) {
+    .contentSubContainer{
+    }
+    .rightElement,.leftElement{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .innerNumber{
+        font-size: 70px;
+    }
+}

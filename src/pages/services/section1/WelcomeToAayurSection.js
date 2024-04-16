@@ -1,4 +1,7 @@
-import { CardSection } from "../../home/sections/section3/ServicesOffer";
+import {
+  FullCardSection,
+  SplideCardSection,
+} from "../../home/sections/section3/ServicesOffer";
 import { SectionContainerLeft } from "../../home/sections/SectionContainer";
 import styles from "./WelcomeToAayurSection.module.css";
 
@@ -21,7 +24,7 @@ const WelcomeToAayurSection = () => {
           healing today. Contact us to schedule a consultation and begin your
           journey to wellness. We're here to support you every step of the way.
         </p>
-        <CardSection />
+        <FullCardSection />
       </div>
     </SectionContainerLeft>
   );

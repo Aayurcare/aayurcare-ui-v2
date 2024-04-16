@@ -6,8 +6,6 @@
     backdrop-filter: blur(9.6px);
     -webkit-backdrop-filter: blur(9.6px);
     border: 1px solid rgba(255, 255, 255, 0.13);
-
-    
     width: 27%;
     flex-direction: column;
     border-radius: 20px;
@@ -17,7 +15,7 @@
     margin-bottom:20px;
     max-height: 33%;
     font-size: 19px;
-    height: 27%;
+    height: 300px;
     justify-content: space-evenly;
 }
 .cardTitle{
@@ -34,16 +32,37 @@
     font-size: 35px;
     align-self: center;
     margin-left: 10px;
-    height: 27%;
+    height: 250px;
     width: 31%;
 }
 .contentSubContainer {
     width: 80%;
     align-self: center;
     padding: 80px;
+    margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
     align-items: left;
     flex-direction: row;
     justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .contentSubContainer {
+        flex-direction: column;
+        padding: 0;
+        padding-right: 40px;
+        justify-content: center;
+    }
+    .textArticle {
+        width: 100%;
+    }
+    .cardItem {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
 }

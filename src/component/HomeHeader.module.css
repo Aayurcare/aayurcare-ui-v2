@@ -5,17 +5,15 @@
     justify-content: space-between;
     padding-left: 80px;
     padding-right: 80px;
+    background-color: white;
     align-items: center;
-}
-
-.logo{
-    width: 160px;
 }
 
 .middleSection {
     display: flex;
     flex-direction: row;
-    width: 635px;
+    width: 350px;
+    margin-left: -80px;
     justify-content: space-between;
 }
 
@@ -30,3 +28,23 @@
 .menuItem:hover{
     cursor: pointer;
 }
+
+.bm-burger-bars {
+    background: #373a47;
+  }
+  
+  .bm-burger-bars-hover {
+    background: #a90000;
+  }
+
+  @media only screen and (max-width: 450px) {
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+    .header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+  }
+

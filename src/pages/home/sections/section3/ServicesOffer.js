@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BackgroundVector from "../../../../assets/images/home/vector2.png";
 import backgroundStyles from "./../BackgroundStyles.module.css";
+import "@splidejs/react-splide/css";
 
 import styles from "./ServicesOffer.module.css";
 import ButtonPrimary from "../../../../component/elements/button/ButtonPrimary";
@@ -14,21 +15,72 @@ import {
   SectionContainerRight,
 } from "../SectionContainer";
 
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 const ServicesOffer = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 550);
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth < 600);
+    });
+  }, []);
   return (
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>
-        <img src={Banner} className={styles.topBannerImage} />
+        {/* <img src={Banner} className={styles.topBannerImage} /> */}
         <p className={styles.title}>
           We offer a range of <span className="text-blue">services</span>
         </p>
-        <CardSection />
+        {isMobile ? <SplideCardSection /> : <FullCardSection />}
       </div>
     </SectionContainerLeft>
   );
 };
 
-const CardSection = () => {
+const SplideCardSection = () => {
+  return (
+    <div className={styles.cardContainer}>
+      <Splide
+        options={{
+          arrows: false,
+          drag: "free",
+        }}
+      >
+        <SplideSlide>
+          <ServicesCard
+            image={DoctorConsultImage}
+            title={"Doctor Consultation"}
+            description={
+              "We offer affordable online doctor consultations to our customers."
+            }
+          />
+        </SplideSlide>
+        <SplideSlide>
+          <ServicesCard
+            image={DiagnosticImage}
+            title={"Diagnostic"}
+            description={
+              "Easily accessible online platform for comprehensive doorstep full-body check-ups."
+            }
+          />
+        </SplideSlide>
+        <SplideSlide>
+          <ServicesCard
+            image={OnlineMedicineImage}
+            title={"Online Medicine"}
+            description={
+              "Effortlessly receive medicine at your doorstep through our convenient online platform."
+            }
+          />
+        </SplideSlide>
+      </Splide>
+    </div>
+  );
+};
+
+const FullCardSection = () => {
   return (
     <div className={styles.cardContainer}>
       <ServicesCard
@@ -38,6 +90,7 @@ const CardSection = () => {
           "We offer affordable online doctor consultations to our customers."
         }
       />
+
       <ServicesCard
         image={DiagnosticImage}
         title={"Diagnostic"}
@@ -72,6 +125,6 @@ const ServicesCard = ({ image, title, description }) => {
   );
 };
 
-export { CardSection };
+export { FullCardSection, SplideCardSection };
 
 export default ServicesOffer;

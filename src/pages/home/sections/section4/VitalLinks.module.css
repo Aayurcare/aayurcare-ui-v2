@@ -43,3 +43,17 @@
 .description{
     text-overflow: ellipsis;
 }
+@media only screen and (max-width: 550px) {
+    .cardSection{
+        width: 100%;
+        display: inline-block;
+    }
+    .contentSubContainer{
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 70%;
+    }
+    .cardItem{
+        width: 80%;
+    }
+}

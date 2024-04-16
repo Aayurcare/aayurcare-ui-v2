@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import BackgroundVector from "../../../../assets/images/home/vector1.png";
 import backgroundStyles from "./../BackgroundStyles.module.css";
 import styles from "./VitalLinks.module.css";
+import "@splidejs/react-splide/css";
 
 //Images
 import NACO from "../../../../assets/images/home/NACO.png";
 import NHM from "../../../../assets/images/home/NationalHealthMission.png";
 import { SectionContainerRight } from "../SectionContainer";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const VitalLinks = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth < 600);
+    });
+  }, []);
   return (
     <SectionContainerRight>
       <div className={styles.contentSubContainer}>
@@ -16,13 +26,13 @@ const VitalLinks = () => {
           Vital Links: Ensuring Your<br></br> Wellbeing is{" "}
           <span className="text-blue">Our Promise.</span>
         </p>
-        <CardSection />
+        {!isMobile ? <FullCardSection /> : <MobileCardSection />}
       </div>
     </SectionContainerRight>
   );
 };
 
-const CardSection = () => {
+const FullCardSection = () => {
   return (
     <div className={styles.cardSection}>
       <CardItem
@@ -47,6 +57,43 @@ const CardSection = () => {
           "Providing crucial information, medical aid, and emotional support to prevent transmission and improve the lives of those impacted. Visit the website for comprehensive resources and assistance."
         }
       />
+    </div>
+  );
+};
+
+const MobileCardSection = () => {
+  return (
+    <div className={styles.cardSection}>
+      <Splide>
+        <SplideSlide>
+          <CardItem
+            image={NHM}
+            title={"Blood Cell NHM"}
+            description={
+              "Your chance to be a hero. Discover the impact of giving blood and how you can save lives. Visit the website to find donation centers and get involved."
+            }
+          />
+        </SplideSlide>
+        <SplideSlide>
+          {" "}
+          <CardItem
+            image={NHM}
+            title={"The World Health Organization (WHO)"}
+            description={
+              "Leading global health initiatives. Dedicated to worldwide healthcare, disease prevention, and well-being. Visit the website for valuable insights and global health updates          "
+            }
+          />
+        </SplideSlide>
+        <SplideSlide>
+          <CardItem
+            image={NACO}
+            title={"National AIDS Control Organization"}
+            description={
+              "Providing crucial information, medical aid, and emotional support to prevent transmission and improve the lives of those impacted. Visit the website for comprehensive resources and assistance."
+            }
+          />
+        </SplideSlide>
+      </Splide>
     </div>
   );
 };

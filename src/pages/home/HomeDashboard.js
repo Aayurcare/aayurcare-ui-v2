@@ -22,7 +22,7 @@ const HomeDashboard = () => {
       <VitalLinks />
       <WordsOfTrust />
       <QnA />
-      <Footer />
+      {/* <Footer /> */}
     </HomeToolbarLayout>
   );
 };

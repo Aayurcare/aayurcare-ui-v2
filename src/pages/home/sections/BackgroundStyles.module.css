@@ -1,6 +1,6 @@
 .section1Container {
     height: 140vh;
-    z-index: -100;
+    
     position: relative;
 }
 
@@ -21,5 +21,13 @@
     justify-content: center;
     top: 10vh;
     left: 0;
-    
+}
+
+@media only screen and (max-width: 550px) {
+    .contentContainer{
+        width: auto;
+    }
+    .backgroundImage {
+        width: 104%;
+    }
 }

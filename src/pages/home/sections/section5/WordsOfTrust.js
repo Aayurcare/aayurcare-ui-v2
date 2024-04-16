@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
-import BackgroundVector from "../../../../assets/images/home/vector2.png";
-import backgroundStyles from "./../BackgroundStyles.module.css";
 import styles from "./WordsOfTrust.module.css";
-import ButtonPrimary from "../../../../component/elements/button/ButtonPrimary";
 import "@splidejs/react-splide/css";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { SectionContainerLeft } from "../SectionContainer";
 
 const WordsOfTrust = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 550);
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth < 600);
+    });
+  }, []);
+
   return (
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>
