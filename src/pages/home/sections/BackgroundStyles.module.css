@@ -1,5 +1,6 @@
 .section1Container {
     height: 140vh;
+    
     position: relative;
 }
 
@@ -23,12 +24,9 @@
 }
 
 @media only screen and (max-width: 650px) {
-    .section1Container {
-        width: 97%;
-        height: 120vh;
-    }
     .contentContainer{
-        margin-top: -15vh;
+        width: auto;
+        height: 80vh;
     }
     .backgroundImage {
         width: 104%;

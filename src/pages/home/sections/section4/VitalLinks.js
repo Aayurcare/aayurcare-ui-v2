@@ -8,6 +8,8 @@ import "@splidejs/react-splide/css";
 //Images
 import NACO from "../../../../assets/images/home/NACO.png";
 import NHM from "../../../../assets/images/home/NationalHealthMission.png";
+import WHO from "../../../../assets/images/home/WHO.svg";
+
 import { SectionContainerRight } from "../SectionContainer";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
@@ -45,7 +47,7 @@ const FullCardSection = () => {
       />
 
       <CardItem
-        image={NHM}
+        image={WHO}
         title={"The World Health Organization (WHO)"}
         description={
           "Leading global health initiatives. Dedicated to worldwide healthcare, disease prevention, and well-being. Visit the website for valuable insights and global health updates          "

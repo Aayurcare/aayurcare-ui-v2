@@ -27,3 +27,14 @@ ol{
 li:before{
     font-weight: 600;
 }
+@media only screen and (max-width: 650px) {
+    .container{
+        margin-top: 2000px;
+    }
+    .contentSection{
+        flex-direction: column-reverse;
+    }
+    .partnershipImg{
+        width: 100%;
+    }
+}

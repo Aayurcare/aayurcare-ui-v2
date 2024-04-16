@@ -1,6 +1,7 @@
 .whoWeAreSection{
     width: 85%;
     margin-top: 20vh;
+    height: 100vh;
     text-align: center;
 }
 .section2{
@@ -17,51 +18,3 @@
 .subTitle{
     font-size: 35px;
 }
-.cardLogoContainer{
-    margin-top: 15px;
-    background: rgba(255, 255, 255,0.5);
-    border: 1px solid #DFDFDF;
-    border-radius: 17px;
-    z-index: 5;
-    height: 180px;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.buildingContainer {
-    position: relative;
-    text-align: center;
-    color: white;
-    margin-top: -50vh;
-    width: 95%;
-    align-self: center;
-  }
-
-.buildingCenteredText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 85%; 
-    transform: translate(-50%, -50%);
-    font-size: 35px;
-  }
-
-  .featureSection{
-    align-self: center;
-    display: flex;
-    margin-top: -100px;
-    width: 95%;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
-  .featureCard{
-    padding: 15px;
-    text-align: center;
-    width: 12%;
-  }
-
-  .featureSubtitle{
-    font-size: 12px;
-  }

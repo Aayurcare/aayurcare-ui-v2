@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionContainerLeft } from "../../home/sections/SectionContainer";
-import styles from "../AboutUs.module.css";
+import styles from "./JourneySection.module.css";
 import Background from "../../../assets/images/aboutus/buildings_bg.png";
 
 import Empathy from "../../../assets/images/aboutus/features/bipolar 2.svg";
@@ -22,9 +22,14 @@ const JourneySection = () => {
           width: "85%",
           textAlign: "center",
         }}
+        className={styles.journeySection}
       >
         <div className={styles.buildingContainer}>
-          <img src={Background} alt="Building" style={{ width: "100%" }} />
+          <img
+            src={Background}
+            alt="Building"
+            style={{ width: "100%", height: "100%" }}
+          />
           <div className={styles.buildingCenteredText}>
             Join our journey to make health accessible for all through
             technology.

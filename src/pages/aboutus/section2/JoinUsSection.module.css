@@ -1,0 +1,27 @@
+.contentContainer{
+    padding : 0 80px 0 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -10%;
+}
+.cardLogoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    align-self: center;
+}
+.logoPartners{
+    width: 100px;
+    margin: 10px 10px 10px 10px;
+}
+@media only screen and (max-width: 650px) {
+    .contentContainer{
+        margin-top: 45vh;
+    }
+    .cardLogoContainer{
+        flex-direction: column;
+    }
+}

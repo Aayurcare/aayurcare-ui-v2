@@ -1,8 +1,5 @@
-import styles from "../AboutUs.module.css";
-import {
-  SectionContainerLeft,
-  SectionContainerRight,
-} from "../../home/sections/SectionContainer";
+import styles from "./JoinUsSection.module.css";
+import { SectionContainerRight } from "../../home/sections/SectionContainer";
 //Logos imports
 import PolicyBaazarLogo from "../../../assets/images/aboutus/logos/policybaazar.svg";
 import HealthiansLogo from "../../../assets/images/aboutus/logos/healthians.svg";
@@ -10,10 +7,12 @@ import BajajLogo from "../../../assets/images/aboutus/logos/bajaj.svg";
 import RedCliffeLogo from "../../../assets/images/aboutus/logos/redcliffe.svg";
 import PharmeasyLogo from "../../../assets/images/aboutus/logos/pharmeasy.svg";
 
+import useIsMobile from "../../../hooks/useIsMobile";
+
 const JoinUsSection = () => {
   return (
     <SectionContainerRight>
-      <div className={styles.section2}>
+      <div className={styles.contentContainer}>
         <p className={styles.textContent}>
           Join us as we shape the future of healthcare together.
         </p>
@@ -40,11 +39,31 @@ const JoinUsSection = () => {
           joyful and purposeful.{" "}
         </p>
         <section className={styles.cardLogoContainer}>
-          <img src={RedCliffeLogo} alt="redcliff logo" />
-          <img src={HealthiansLogo} alt="healthians logo" />
-          <img src={PharmeasyLogo} alt="pharmeasy logo" />
-          <img src={PolicyBaazarLogo} alt="policybaazar logo" />
-          <img src={BajajLogo} alt="bajaj logo" />
+          <img
+            src={RedCliffeLogo}
+            alt="redcliff logo"
+            className={styles.logoPartners}
+          />
+          <img
+            src={HealthiansLogo}
+            alt="healthians logo"
+            className={styles.logoPartners}
+          />
+          <img
+            src={PharmeasyLogo}
+            alt="pharmeasy logo"
+            className={styles.logoPartners}
+          />
+          <img
+            src={PolicyBaazarLogo}
+            alt="policybaazar logo"
+            className={styles.logoPartners}
+          />
+          <img
+            src={BajajLogo}
+            alt="bajaj logo"
+            className={styles.logoPartners}
+          />
         </section>
         <p className={styles.subTitle}>
           Join our mission for accessible health through tech innovation.

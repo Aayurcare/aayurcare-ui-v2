@@ -19,12 +19,13 @@
 }
 
 .cardItem{
-    width: 300px;
+    width: 30%;
+    margin: 10px;
     text-align: center;
     padding: 20px;
     border: 1px solid #EDEDED;
     border-radius: 16px;
-    height: 400px;
+    height: auto;
     text-overflow: ellipsis;
 }
 
@@ -55,5 +56,11 @@
     }
     .cardItem{
         width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .cardTitle{
+        height: 140px;
     }
 }

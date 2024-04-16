@@ -12,8 +12,11 @@ import FranchiseEnquirySection from "./section4/FranchiseEnquirySection";
 import PartnershipSection from "./section5/PartnershipSection";
 import Footer from "../../component/footer/Footer";
 import ImagedTitleSection from "../../component/sections/ImagedTitleSection";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const AboutUs = () => {
+  const isMobile = useIsMobile();
+
   return (
     <HomeToolbarLayout highlighted={1}>
       <ImagedTitleSection
@@ -58,10 +61,13 @@ const AboutUs = () => {
           </p>
         </div>
       </SectionContainerLeft>
+      {/* {isMobile && <SectionContainerRight></SectionContainerRight>} */}
       <JoinUsSection />
       <JourneySection />
       <FranchiseEnquirySection />
       <PartnershipSection />
+      {isMobile && <SectionContainerRight></SectionContainerRight>}
+      {isMobile && <SectionContainerLeft></SectionContainerLeft>}
       <Footer />
     </HomeToolbarLayout>
   );

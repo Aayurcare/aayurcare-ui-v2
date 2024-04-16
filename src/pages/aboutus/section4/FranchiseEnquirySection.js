@@ -44,9 +44,18 @@ const EnquiryCard = () => {
             />
           </div>
           <input placeholder="E-mail" type="email" className={styles.input} />
+          <input
+            placeholder="Mobile Number"
+            type="number"
+            className={styles.input}
+          />
           <input placeholder="E-mail" type="email" className={styles.input} />
-          <input placeholder="E-mail" type="email" className={styles.input} />
-          <input placeholder="E-mail" type="email" className={styles.input} />
+          <input placeholder="Website" type="text" className={styles.input} />
+          <input
+            placeholder="Write a message"
+            type="text-area"
+            className={styles.input}
+          />
           <button>Send</button>
         </section>
       </section>
