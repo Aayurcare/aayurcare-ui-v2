@@ -48,12 +48,12 @@
 }
 
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     .contentSubContainer {
         flex-direction: column;
         padding: 0;
         padding-right: 40px;
-        justify-content: center;
+        margin-top: -80px;
     }
     .textArticle {
         width: 100%;

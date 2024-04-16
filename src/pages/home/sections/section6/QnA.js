@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import BackgroundVector from "../../../../assets/images/home/vector1.png";
-import backgroundStyles from "./../BackgroundStyles.module.css";
 import styles from "./QnA.module.css";
 import Collapsible from "react-collapsible";
 import Collapse from "../../../../assets/images/home/qna/collapse.jpg";
 import Expand from "../../../../assets/images/home/qna/expand.jpg";
 import GroupProfiles from "../../../../assets/images/home/qna/group_profiles.png";
-import {
-  SectionContainerLeft,
-  SectionContainerRight,
-} from "../SectionContainer";
+import { SectionContainerRight } from "../SectionContainer";
+import "react-toastify/dist/ReactToastify.css";
+
+import { ToastContainer, toast, Bounce } from "react-toastify";
+
 const QnA = () => {
   return (
     <SectionContainerRight>
@@ -154,6 +153,19 @@ const ProfileSection = () => {
 };
 
 const CallbackCard = () => {
+  const notify = () =>
+    toast.success("Thank you, We will get back to you", {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+
   return (
     <div className={styles.callBackSection}>
       <section className={styles.leftCallBackSection}>
@@ -182,12 +194,29 @@ const CallbackCard = () => {
             placeholder="Also whatsapp number"
             value="Also whatsapp number"
             name="check"
+            style={{
+              height: "20px",
+              color: "#666666",
+              marginBottom: "0",
+              marginRight: "7px",
+            }}
           />
-          <label for="check" style={{ fontSize: "12px", color: "#666666" }}>
+          <label
+            for="check"
+            style={{
+              fontSize: "12px",
+              color: "#666666",
+              display: "inline-block",
+              alignContent: "center",
+            }}
+          >
             Also whatsapp number
           </label>
         </span>
-        <button className={styles.buttonRequest}>Request Call</button>
+        <button onClick={notify} className={styles.buttonRequest}>
+          Request Call
+        </button>
+        <ToastContainer />
       </aside>
     </div>
   );

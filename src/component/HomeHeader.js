@@ -14,9 +14,9 @@ const HomeHeader = ({ highlighted }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 550);
+    setIsMobile(window.innerWidth < 650);
     window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth < 500);
+      setIsMobile(window.innerWidth < 650);
     });
   }, []);
 

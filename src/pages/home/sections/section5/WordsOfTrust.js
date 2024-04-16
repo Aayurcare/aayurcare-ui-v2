@@ -9,9 +9,9 @@ const WordsOfTrust = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 550);
+    setIsMobile(window.innerWidth < 650);
     window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth < 600);
+      setIsMobile(window.innerWidth < 650);
     });
   }, []);
 

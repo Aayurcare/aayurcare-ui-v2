@@ -43,7 +43,7 @@
 .description{
     text-overflow: ellipsis;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     .cardSection{
         width: 100%;
         display: inline-block;

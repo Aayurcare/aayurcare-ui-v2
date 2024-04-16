@@ -21,7 +21,7 @@ const ServicesOffer = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 550);
+    setIsMobile(window.innerWidth < 600);
     window.addEventListener("resize", () => {
       setIsMobile(window.innerWidth < 600);
     });

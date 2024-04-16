@@ -41,3 +41,19 @@ hr{
     cursor: pointer;
     margin: 0 5px 0 5px;
 }
+
+@media only screen and (max-width: 650px) {
+    .footerContainer{
+        height: 80vh;
+        margin-top: 300px;
+    }
+    .topSection{
+        flex-direction: column;
+    }
+    .footerDivision{
+        display: flex;
+        /* justify-content: center; */
+        margin-left: 80px;
+        flex-direction: column;
+    }
+}

@@ -45,8 +45,9 @@
     font-weight: 500;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     .contentSubContainer{
+        height: 90vh;
     }
     .rightElement,.leftElement{
         margin-top: 10px;

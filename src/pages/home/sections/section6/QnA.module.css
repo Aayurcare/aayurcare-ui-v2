@@ -54,8 +54,7 @@
 .textInput{
     border-color: #D1D1D1;
     border-radius: 16px;
-    box-shadow: none;
-    
+    box-shadow: none; 
     height: 25px;
     border-style: solid;
     margin-bottom: 10px;
@@ -81,13 +80,28 @@
     font-size: 13px;
     border: none;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     .contentSubContainer{
+        margin: 10px 20px 10px 40px;
 
     }
     .title{
         margin-top: 60px;
         font-size: 25px;
+    }
+    .leftCallBackSection{
+        display: none;
+    }
+    .callBackSection{
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+    }
+    .callBackCard{
+        width: 80%;
+        height: 270px;
+        background-color: white;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 }
 
