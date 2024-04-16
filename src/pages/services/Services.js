@@ -17,8 +17,11 @@ import ImagePatient from "../../assets/images/services/aside_img_3_patient.png";
 import ImageStairs from "../../assets/images/services/aside_img_4_stairs.png";
 import ImagePhone from "../../assets/images/services/aside_img_5_phone.png";
 import ImageGlobe from "../../assets/images/services/aside_img_6_globe.png";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const Services = () => {
+  const isMobile = useIsMobile();
+
   return (
     <HomeToolbarLayout highlighted={2}>
       <ImagedTitleSection
@@ -52,7 +55,10 @@ const Services = () => {
         </div>
       </SectionContainerRight>
       <SectionContainerLeft>
-        <div style={{ marginTop: "320px" }} className={styles.containerRight}>
+        <div
+          style={{ marginTop: isMobile ? "200vh" : "320px" }}
+          className={styles.containerRight}
+        >
           <ServiceCard
             image={ImagePatient}
             title={"Benefits are applicable to OPD and  IPD Categories*"}
@@ -72,7 +78,10 @@ const Services = () => {
         </div>
       </SectionContainerLeft>
       <SectionContainerRight>
-        <div style={{ marginTop: "200px" }} className={styles.containerRight}>
+        <div
+          style={{ marginTop: isMobile ? "230vh" : "320px" }}
+          className={styles.containerRight}
+        >
           <ServiceCard
             image={ImagePhone}
             title={"Introducing Top-Up Facilities*"}
@@ -91,16 +100,27 @@ const Services = () => {
           />
         </div>
       </SectionContainerRight>
+      {isMobile && <SectionContainerLeft></SectionContainerLeft>}
+      {isMobile && (
+        <SectionContainerRight
+          styles={{ height: "90vh" }}
+        ></SectionContainerRight>
+      )}
       <Footer />
     </HomeToolbarLayout>
   );
 };
 
 const ServiceCard = ({ image, title, description, image_alignment }) => {
+  const isMobile = useIsMobile();
+
   const _styles = {
     display: "flex",
     flexDirection: image_alignment == "left" ? "row" : "row-reverse",
   };
+  if (isMobile) {
+    _styles.flexDirection = "column";
+  }
   return (
     <article className={styles.serviceArticle} style={_styles}>
       <img className={styles.serviceImage} src={image} alt={title} />

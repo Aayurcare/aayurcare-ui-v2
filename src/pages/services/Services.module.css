@@ -16,6 +16,8 @@
     align-self: center;
     margin-top: 10px;
     width: 80%;
+    display: flex;
+    flex-direction: row;
 }
 .serviceContent{
     padding: 15px;
@@ -34,4 +36,21 @@
 .serviceTitle{
     
     font-weight: 600;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .containerRight{
+        margin-top: 130vh;
+    }
+    .serviceArticle{
+        width: 100%;
+        margin: 10px 20px 5px 20px;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+    .serviceImage{
+        width: 100%;
+    }
 }
