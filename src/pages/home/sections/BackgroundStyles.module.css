@@ -24,8 +24,8 @@
 
 @media only screen and (max-width: 650px) {
     .section1Container {
-        width: auto;
-        height: 100vh;
+        width: 97%;
+        height: 120vh;
     }
     .contentContainer{
         margin-top: -15vh;

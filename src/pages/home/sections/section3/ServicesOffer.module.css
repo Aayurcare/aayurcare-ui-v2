@@ -6,7 +6,6 @@
     padding-left: 80px;
     z-index: 200;
     padding-right: 80px;
-
 }
 
 .topBannerImage{
@@ -90,14 +89,12 @@
   }
 
 /*Tablet Responsive*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     .topBannerImage{
         width: 80%;
     }
     .contentSubContainer{
-        margin-top:100px;
         width: 70%;
-
     }
     .card{
         width: 90%;
@@ -133,8 +130,7 @@
 @media only screen and (max-width: 500px) {
 
     .contentSubContainer{
-        margin-top:150px;
+        margin-top:250px;
         width: 70%;
-
     }
 }

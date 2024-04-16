@@ -82,11 +82,10 @@
 }
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
-        margin: 10px 20px 10px 40px;
-
+        margin: -20vh 20px 10px 40px;
     }
     .title{
-        margin-top: 60px;
+        margin-top: 10px;
         font-size: 25px;
     }
     .leftCallBackSection{

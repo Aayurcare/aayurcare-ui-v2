@@ -47,7 +47,8 @@
 
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
-        height: 90vh;
+        height: 100vh;
+        margin-top: -100px;   
     }
     .rightElement,.leftElement{
         margin-top: 10px;

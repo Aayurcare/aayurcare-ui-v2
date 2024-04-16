@@ -39,79 +39,103 @@ const CollapsibleSection = () => {
   return (
     <div className={styles.collapsableSection}>
       <Collapsible
-        trigger={TriggerElement(isExpanded[0])}
+        trigger={TriggerElement(
+          isExpanded[0],
+          "What is included in your health membership plan?"
+        )}
         onTriggerOpening={() => toggleExpanded(0)}
         onTriggerClosing={() => toggleExpanded(0)}
       >
         <p>
-          This is the collapsible content. It can be any element or React
-          component you like.
+          Our health membership plan encompasses a comprehensive package of
+          health and wellness services, covering preventive care, telemedicine,
+          and more.
         </p>
       </Collapsible>
       <hr />
       <Collapsible
-        trigger={TriggerElement(isExpanded[1])}
+        trigger={TriggerElement(
+          isExpanded[1],
+          "How do I sign up for the health membership plan?"
+        )}
         onTriggerOpening={() => toggleExpanded(1)}
         onTriggerClosing={() => toggleExpanded(1)}
       >
         <p>
-          This is the collapsible content. It can be any element or React
-          component you like.
+          Signing up is easy; visit our website, follow the registration
+          process, and select the appropriate membership tier before completing
+          payment.
         </p>
       </Collapsible>
       <hr />
       <Collapsible
-        trigger={TriggerElement(isExpanded[2])}
+        trigger={TriggerElement(
+          isExpanded[2],
+          "Are there any waiting periods for accessing benefits?"
+        )}
         onTriggerOpening={() => toggleExpanded(2)}
         onTriggerClosing={() => toggleExpanded(2)}
       >
         <p>
-          This is the collapsible content. It can be any element or React
-          component you like.
+          Our health membership plan encompasses a comprehensive package of
+          health and wellness services, covering preventive care, telemedicine,
+          and more.
         </p>
       </Collapsible>
       <hr />
       <Collapsible
-        trigger={TriggerElement(isExpanded[2])}
-        onTriggerOpening={() => toggleExpanded(2)}
-        onTriggerClosing={() => toggleExpanded(2)}
+        trigger={TriggerElement(
+          isExpanded[3],
+          "Is my personal health information kept confidential and secure?"
+        )}
+        onTriggerOpening={() => toggleExpanded(3)}
+        onTriggerClosing={() => toggleExpanded(3)}
       >
         <p>
-          This is the collapsible content. It can be any element or React
-          component you like.
+          Absolutely, we adhere to strict data privacy regulations to ensure
+          your information is secure and confidential.
         </p>
       </Collapsible>
       <hr />
       <Collapsible
-        trigger={TriggerElement(isExpanded[2])}
-        onTriggerOpening={() => toggleExpanded(2)}
-        onTriggerClosing={() => toggleExpanded(2)}
+        trigger={TriggerElement(
+          isExpanded[4],
+          "How can I contact customer support for further questions?"
+        )}
+        onTriggerOpening={() => toggleExpanded(4)}
+        onTriggerClosing={() => toggleExpanded(4)}
       >
         <p>
-          This is the collapsible content. It can be any element or React
-          component you like.
+          Our 24x7 customer support is available via email, phone, and live chat
+          for any assistance you may need.
         </p>
       </Collapsible>
       <hr />
       <Collapsible
-        trigger={TriggerElement(isExpanded[2])}
-        onTriggerOpening={() => toggleExpanded(2)}
-        onTriggerClosing={() => toggleExpanded(2)}
+        trigger={TriggerElement(
+          isExpanded[5],
+          "How does medicine inclusion work?"
+        )}
+        onTriggerOpening={() => toggleExpanded(5)}
+        onTriggerClosing={() => toggleExpanded(5)}
       >
         <p>
-          This is the collapsible content. It can be any element or React
-          component you like.
+          Members have access to essential medicines at no extra cost,
+          prescribed by affiliated healthcare providers.
         </p>
       </Collapsible>
       <hr />
       <Collapsible
-        trigger={TriggerElement(isExpanded[2])}
-        onTriggerOpening={() => toggleExpanded(2)}
-        onTriggerClosing={() => toggleExpanded(2)}
+        trigger={TriggerElement(
+          isExpanded[6],
+          "How do I avail OPD reimbursement?"
+        )}
+        onTriggerOpening={() => toggleExpanded(6)}
+        onTriggerClosing={() => toggleExpanded(6)}
       >
         <p>
-          This is the collapsible content. It can be any element or React
-          component you like.
+          Pay upfront for medical services, keep original receipts, and submit
+          reimbursement claims through our portal or app.
         </p>
       </Collapsible>
       <hr />
@@ -119,7 +143,7 @@ const CollapsibleSection = () => {
   );
 };
 
-const TriggerElement = (isExpanded) => {
+const TriggerElement = (isExpanded, text) => {
   return (
     <span
       style={{
@@ -128,9 +152,7 @@ const TriggerElement = (isExpanded) => {
         alignItems: "center",
       }}
     >
-      <b style={{ display: "inline-block", fontWeight: "600" }}>
-        What is included in your health membership plan ?
-      </b>
+      <b style={{ display: "inline-block", fontWeight: "600" }}>{text}</b>
       <img
         src={isExpanded ? Collapse : Expand}
         alt={isExpanded ? "Collapse" : "Expand"}

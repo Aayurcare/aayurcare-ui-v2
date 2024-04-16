@@ -4,16 +4,11 @@ import styles from "./CustomizeHealthPlan.module.css";
 import backgroundStyles from "../BackgroundStyles.module.css";
 import ButtonSecondary from "../../../../component/elements/button/ButtonSecondary";
 import { SectionContainerLeft } from "../SectionContainer";
+import useIsMobile from "../../../../hooks/useIsMobile";
 
 const CustomizeHealthPlan = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 550);
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth < 600);
-    });
-  }, []);
   return (
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>

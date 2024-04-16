@@ -16,16 +16,11 @@ import {
 } from "../SectionContainer";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import useIsMobile from "../../../../hooks/useIsMobile";
 
 const ServicesOffer = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 600);
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth < 600);
-    });
-  }, []);
   return (
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>

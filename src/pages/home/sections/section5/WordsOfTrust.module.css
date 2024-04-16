@@ -33,3 +33,11 @@
     width: 100px !important;
     background: red !important;
 }
+@media only screen and (max-width: 650px) {
+    .contentSubContainer{
+        margin-top: -40px;
+    }
+    .title{
+        padding: 0 20px 0 20px;
+    }
+}
