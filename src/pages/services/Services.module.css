@@ -34,14 +34,13 @@
 }
 
 .serviceTitle{
-    
     font-weight: 600;
 }
 
 
 @media only screen and (max-width: 650px) {
     .containerRight{
-        margin-top: 130vh;
+        margin-top: 150vh;
     }
     .serviceArticle{
         width: 100%;

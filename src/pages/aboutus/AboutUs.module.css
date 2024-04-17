@@ -1,7 +1,7 @@
 .whoWeAreSection{
     width: 85%;
     margin-top: 20vh;
-    height: 100vh;
+    height: auto;
     text-align: center;
 }
 .section2{
@@ -17,4 +17,8 @@
 
 .subTitle{
     font-size: 35px;
+}
+
+.textContent{
+    height: max-content;
 }

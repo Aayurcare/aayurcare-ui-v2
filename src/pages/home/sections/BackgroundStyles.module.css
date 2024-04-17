@@ -16,6 +16,7 @@
     height: 100%;
     z-index: -100;
     margin-top: -15vh;
+    padding-top: 15vh;
     position: absoute;
     display: flex;
     justify-content: center;

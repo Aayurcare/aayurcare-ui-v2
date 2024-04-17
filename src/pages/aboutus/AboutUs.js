@@ -68,6 +68,8 @@ const AboutUs = () => {
       <PartnershipSection />
       {isMobile && <SectionContainerRight></SectionContainerRight>}
       {isMobile && <SectionContainerLeft></SectionContainerLeft>}
+      {isMobile && <SectionContainerRight></SectionContainerRight>}
+      {isMobile && <SectionContainerLeft></SectionContainerLeft>}
       <Footer />
     </HomeToolbarLayout>
   );

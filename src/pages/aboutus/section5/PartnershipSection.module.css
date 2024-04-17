@@ -29,7 +29,7 @@ li:before{
 }
 @media only screen and (max-width: 650px) {
     .container{
-        margin-top: 2000px;
+        margin-top: 300vh;
     }
     .contentSection{
         flex-direction: column-reverse;

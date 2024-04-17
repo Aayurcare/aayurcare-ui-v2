@@ -1,5 +1,6 @@
 .container{
     width: 100%;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -96,7 +97,7 @@
 
 @media only screen and (max-width: 650px) {
   .container{
-    margin-top: 1200px;
+    margin-top: 170vh;
   }
   .subSectionEnquiry{
     flex-direction: column;
@@ -112,5 +113,8 @@
   .cardItem{
     width: 70%;
     margin-top: 10px;
+  }
+  .nameInput{
+    width: 40%;
   }
 }

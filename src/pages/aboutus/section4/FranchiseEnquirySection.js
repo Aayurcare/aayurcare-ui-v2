@@ -2,7 +2,7 @@ import { SectionContainerRight } from "../../home/sections/SectionContainer";
 import styles from "./FranchiseEnquirySection.module.css";
 
 import FranchiseEnquiryImg from "../../../assets/images/aboutus/franchise_enquiry.png";
-
+import { ToastContainer, toast, Bounce } from "react-toastify";
 const FranchiseEnquirySection = () => {
   return (
     <SectionContainerRight>
@@ -15,6 +15,18 @@ const FranchiseEnquirySection = () => {
 };
 
 const EnquiryCard = () => {
+  const notify = () =>
+    toast.success("Thank you, We will get back to you", {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   return (
     <div className={styles.enquiryCard}>
       <p className={styles.enquiryTitle}>
@@ -56,7 +68,8 @@ const EnquiryCard = () => {
             type="text-area"
             className={styles.input}
           />
-          <button>Send</button>
+          <button onClick={notify}>Send</button>
+          <ToastContainer />
         </section>
       </section>
     </div>

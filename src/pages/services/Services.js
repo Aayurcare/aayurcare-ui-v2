@@ -100,11 +100,20 @@ const Services = () => {
           />
         </div>
       </SectionContainerRight>
-      {isMobile && <SectionContainerLeft></SectionContainerLeft>}
+      {isMobile && (
+        <SectionContainerLeft
+          styles={{ height: "100vh" }}
+        ></SectionContainerLeft>
+      )}
       {isMobile && (
         <SectionContainerRight
-          styles={{ height: "90vh" }}
+          styles={{ height: "100vh" }}
         ></SectionContainerRight>
+      )}
+      {isMobile && (
+        <SectionContainerLeft
+          styles={{ height: "100vh" }}
+        ></SectionContainerLeft>
       )}
       <Footer />
     </HomeToolbarLayout>

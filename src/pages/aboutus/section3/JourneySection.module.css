@@ -1,5 +1,7 @@
+.journeySection{
+    margin-top: 10px;
+}
 .cardLogoContainer{
-    margin-top: 15px;
     background: rgba(255, 255, 255,0.5);
     border: 1px solid #DFDFDF;
     border-radius: 17px;
@@ -22,7 +24,7 @@
     position: relative;
     text-align: center;
     color: white;
-    margin-top: -50vh;
+    margin-top: -100px;
     width: 95%;
     align-self: center;
   }
@@ -57,12 +59,13 @@
   .featureTitle{
     font-size: 16px;
   }
+  
   @media only screen and (max-width: 650px) {
     .buildingContainer{
-      height: 50vh;
+      height: auto;
     }
     .journeySection{
-      margin-top: 1500px;
+      margin-top: 180vh;
     }
     .title{
       font-size: 6vw;
@@ -76,13 +79,22 @@
     .buildingCenteredText{
       font-size: 5vw;
     }
-    
+    .featureSubtitle{
+      font-size: 2vw;
+    }
     .featureCard{
         width: auto;
-        
+        height: auto;
     }
     .featureTitle{
         font-size: 3vw;
+    }
+    .featureCard{
+      padding: 10px 15px 0px 15px;
+
+      text-align: center;
+      margin: 10px;
+      height: auto;
     }
   }
 
@@ -91,4 +103,5 @@
       margin-top: -10%;
       grid-template-columns: auto auto auto;
     }
+    
 }
