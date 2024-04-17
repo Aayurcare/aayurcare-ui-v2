@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./QnA.module.css";
 import Collapsible from "react-collapsible";
-import Collapse from "../../../../assets/images/home/qna/collapse.jpg";
-import Expand from "../../../../assets/images/home/qna/expand.jpg";
+import Collapse from "../../../../assets/images/home/qna/collapse.svg";
+import Expand from "../../../../assets/images/home/qna/expand.svg";
 import GroupProfiles from "../../../../assets/images/home/qna/group_profiles.png";
 import { SectionContainerRight } from "../SectionContainer";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,7 +52,7 @@ const CollapsibleSection = () => {
           and more.
         </p>
       </Collapsible>
-      <hr />
+      <hr className={styles.qnaHR} />
       <Collapsible
         trigger={TriggerElement(
           isExpanded[1],
@@ -67,7 +67,7 @@ const CollapsibleSection = () => {
           payment.
         </p>
       </Collapsible>
-      <hr />
+      <hr className={styles.qnaHR} />
       <Collapsible
         trigger={TriggerElement(
           isExpanded[2],
@@ -82,7 +82,7 @@ const CollapsibleSection = () => {
           and more.
         </p>
       </Collapsible>
-      <hr />
+      <hr className={styles.qnaHR} />
       <Collapsible
         trigger={TriggerElement(
           isExpanded[3],
@@ -96,7 +96,7 @@ const CollapsibleSection = () => {
           your information is secure and confidential.
         </p>
       </Collapsible>
-      <hr />
+      <hr className={styles.qnaHR} />
       <Collapsible
         trigger={TriggerElement(
           isExpanded[4],
@@ -110,7 +110,7 @@ const CollapsibleSection = () => {
           for any assistance you may need.
         </p>
       </Collapsible>
-      <hr />
+      <hr className={styles.qnaHR} />
       <Collapsible
         trigger={TriggerElement(
           isExpanded[5],
@@ -124,7 +124,7 @@ const CollapsibleSection = () => {
           prescribed by affiliated healthcare providers.
         </p>
       </Collapsible>
-      <hr />
+      <hr className={styles.qnaHR} />
       <Collapsible
         trigger={TriggerElement(
           isExpanded[6],
@@ -138,7 +138,6 @@ const CollapsibleSection = () => {
           reimbursement claims through our portal or app.
         </p>
       </Collapsible>
-      <hr />
     </div>
   );
 };
@@ -164,7 +163,7 @@ const TriggerElement = (isExpanded, text) => {
 const ProfileSection = () => {
   return (
     <span className={styles.profileSection}>
-      <img src={GroupProfiles} />
+      <img src={GroupProfiles} className={styles.profileSectionImage} />
       <p>Still have any questions?</p>
       <p className={styles.subTitle}>
         Unveiling Clarity: Your Go-To Guide for Frequently Asked <br></br>

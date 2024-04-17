@@ -24,7 +24,7 @@ const ServicesOffer = () => {
   return (
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>
-        {/* <img src={Banner} className={styles.topBannerImage} /> */}
+        <img src={Banner} className={styles.topBannerImage} />
         <p className={"title-home"}>
           We offer a range of <span className="text-blue">services</span>
         </p>

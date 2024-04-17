@@ -8,6 +8,7 @@
     margin-top: 120px;
 }
 
+
 .title{
     margin-top: 100px;
     padding-left: 80px;
@@ -15,26 +16,53 @@
     padding-right: 80px;
 }
 
-.testimonies{
-    justify-content: space-evenly;
+.testimonies {
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
+    justify-content: space-between; /* Ensure equal spacing between items */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    margin-top: 20px; /* Adjust top margin as needed */
+    overflow: hidden; /* Hide any overflowing content */
+    width: 100%;
+  }
+
+
+.carousel {
+    background: #EEE;
+  }
+  
+  .carousel-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+  .is-selected {
+    background-color: blue !important; /* Set the desired color for the selected dot */
+  }
+  
 
 .testimonialCard{
-    overflow: hidden;
-    align-items: center;
     text-align: center;
     margin: 10px;
     padding: 10px 30px 30px 30px;
     z-index: 1;
+    width: 100%;
     background-color: rgba(247, 250, 255, 1);
 }
-.is-active{
-    width: 100px !important;
-    background: red !important;
-}
+
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
         margin-top: 80px;

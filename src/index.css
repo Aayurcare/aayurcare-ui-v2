@@ -16,6 +16,7 @@ code {
     monospace;
 }
 
+
 .text-secondary{
   color: #b3b3b3;
 }
@@ -66,4 +67,8 @@ input[type=number] {
   .title-home{
     font-size: 30px;
   }
+}
+
+.flickity-page-dots .dot.is-selected {
+  background-color: #114DD2; /* Set the desired color for the selected dot */
 }

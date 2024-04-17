@@ -10,7 +10,9 @@
 }
 
 .topBannerImage{
+    max-width: 1000px;
     width: 70%;
+    margin: -100px 0 100px 0;
 }
 
 .title{

@@ -25,18 +25,19 @@ const LandingHomeSection = () => {
       </section>
       <section className={styles.right}>
         <p className={styles.title}>
-          Secure your well-being{!isMobile && <br></br>}at any age with{" "}
-          {!isMobile && <br></br>}the right{" "}
+          Secure your well-being{!isMobile && <br></br>} at any age with the{" "}
+          {!isMobile && <br></br>}
           <span className={"text-blue"} style={{ display: "inline-block" }}>
-            {" "}
-            insurance
+            right plan.{" "}
           </span>{" "}
-          plan.
         </p>
-        <p className="text-secondary">
+        <p className={styles.description}>
           Protect your family's savings from medical emergencies
         </p>
-        <ButtonPrimary content={"Learn More"} />
+        <ButtonPrimary
+          content={"Learn More"}
+          className={styles.buttonLearnMore}
+        />
       </section>
     </div>
   );

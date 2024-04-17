@@ -29,6 +29,9 @@
         width: auto;
         height: 80vh;
     }
+    .section1Container{
+        min-height: 120vh;
+    }
     .backgroundImage {
         width: 104%;
     }

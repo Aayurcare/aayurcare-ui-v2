@@ -43,6 +43,7 @@
 }
 .description{
     text-overflow: ellipsis;
+    font-weight: 300;
 }
 
 @media only screen and (max-width: 650px) {
@@ -59,20 +60,20 @@
     }
     .cardTitle{
         height: auto;
-        font-size: 10vw;
+        font-size: 5vw;
     }
     .description{
-        font-size: 4vw;
+        font-size: 3vw;
     }
 }
 
 @media only screen and (max-width: 1150px) {
     .cardTitle{
         height: auto;
-        font-size: 25px;
+        font-size: 15px;
     }
     .description{
         font-weight: 300;
-        font-size: 20px;
+        font-size: 12px;
     }
 }

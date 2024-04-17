@@ -23,6 +23,10 @@
     align-self: center;
     margin-top: 25px;
     text-align: center;
+    margin-bottom: 35px;
+}
+.profileSectionImage{
+    width: 50%;   
 }
 
 .subTitle{
@@ -51,6 +55,7 @@
     padding: 16px;
     margin: 20px;
 }
+
 
 .textInput{
     border-color: #D1D1D1;
@@ -82,13 +87,16 @@
     font-size: 13px;
     border: none;
 }
+.qnaHR{
+    width: 100%;
+    border-color: #f9f9f95a;
+}
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
-        margin: 0px 40px 0 40px;
-        height: 150vh;
+        margin: -100px 40px 0 40px;
+        height: 100vh;
     }
     .title{
-
         font-size: 25px;
     }
     .leftCallBackSection{
