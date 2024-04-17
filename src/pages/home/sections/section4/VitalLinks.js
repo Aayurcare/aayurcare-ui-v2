@@ -25,8 +25,8 @@ const VitalLinks = () => {
   return (
     <SectionContainerRight>
       <div className={styles.contentSubContainer}>
-        <p className={styles.title}>
-          Vital Links: Ensuring Your<br></br> Wellbeing is{" "}
+        <p className="title-home">
+          Vital Links: Ensuring Your{isMobile && <br></br>} Wellbeing is{" "}
           <span className="text-blue">Our Promise.</span>
         </p>
         {!isMobile ? <FullCardSection /> : <MobileCardSection />}
@@ -80,7 +80,7 @@ const MobileCardSection = () => {
         <SplideSlide>
           {" "}
           <CardItem
-            image={NHM}
+            image={WHO}
             title={"The World Health Organization (WHO)"}
             description={
               "Leading global health initiatives. Dedicated to worldwide healthcare, disease prevention, and well-being. Visit the website for valuable insights and global health updates          "

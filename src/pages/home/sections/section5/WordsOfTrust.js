@@ -18,7 +18,7 @@ const WordsOfTrust = () => {
   return (
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>
-        <p className={styles.title}>
+        <p className="title-home">
           Words of Trust and Satisfaction:
           <br></br>
           <span className="text-blue">Testimonials.</span>

@@ -55,3 +55,15 @@ input[type=number] {
 .subTitle{
   font-size: 35px;
 }
+
+.title-home{
+  text-align: left;
+  align-self: flex-start;
+  font-size: 37px;
+}
+
+@media only screen and (max-width: 650px) {
+  .title-home{
+    font-size: 30px;
+  }
+}

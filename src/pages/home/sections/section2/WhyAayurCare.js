@@ -8,7 +8,7 @@ const WhyAayurCare = () => {
   return (
     <SectionContainerRight>
       <div className={styles.contentSubContainer}>
-        <p className={styles.whyAayurTitle}>
+        <p className="title-home">
           Why <span className="text-blue">Aayur Care</span>?
         </p>
         <div className={styles.tableItems}>

@@ -1,6 +1,6 @@
 .section1Container {
-    height: 140vh;
-    
+    height: auto;
+    min-height: 110vh;
     position: relative;
 }
 
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     z-index: -100;
-    margin-top: -20vh;
+    margin-top: -15vh;
     position: absoute;
     display: flex;
     justify-content: center;
@@ -31,4 +31,5 @@
     .backgroundImage {
         width: 104%;
     }
+    
 }

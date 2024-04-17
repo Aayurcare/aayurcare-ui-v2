@@ -46,7 +46,7 @@ hr{
     .footerContainer{
         height: auto;
         width: auto;
-        margin-top: 300px;
+        margin-top: 60vh;
     }
     .topSection{
         flex-direction: column;

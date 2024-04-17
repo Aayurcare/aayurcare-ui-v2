@@ -9,10 +9,6 @@ import QnA from "./sections/section6/QnA";
 import Footer from "../../component/footer/Footer";
 
 const HomeDashboard = () => {
-  const styles = {
-    firstBackgroud: {},
-    secondBackground: {},
-  };
   return (
     <HomeToolbarLayout highlighted={0}>
       <LandingHomeSection />

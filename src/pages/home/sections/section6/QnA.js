@@ -13,7 +13,7 @@ const QnA = () => {
   return (
     <SectionContainerRight>
       <div className={styles.contentSubContainer}>
-        <p className={styles.title}>
+        <p className="title-home">
           Answers To Your Most Common <br></br>Questions:{" "}
           <span className="text-blue">FAQ</span>
         </p>
