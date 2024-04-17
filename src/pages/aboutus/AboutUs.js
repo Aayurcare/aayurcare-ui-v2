@@ -69,7 +69,11 @@ const AboutUs = () => {
       {isMobile && <SectionContainerRight></SectionContainerRight>}
       {isMobile && <SectionContainerLeft></SectionContainerLeft>}
       {isMobile && <SectionContainerRight></SectionContainerRight>}
-      {isMobile && <SectionContainerLeft></SectionContainerLeft>}
+      {/* {isMobile && (
+        <SectionContainerLeft
+          styles={{ minHeight: "50vh !important" }}
+        ></SectionContainerLeft>
+      )} */}
       <Footer />
     </HomeToolbarLayout>
   );

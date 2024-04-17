@@ -58,7 +58,7 @@ const Footer = () => {
           </span>
         </section>
       </div>
-      <hr></hr>
+      <hr className={styles.hrFooter}></hr>
       <section className={styles.bottomSection}>
         <p className={styles.copyright}>
           Copyright © 2024. Aayurcare. All rights reserved.

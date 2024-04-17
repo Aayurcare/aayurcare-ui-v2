@@ -56,7 +56,7 @@
 @media only screen and (max-width: 650px) {
     .contentSubContainer {
         flex-direction: column;
-        padding: 0 40px 0 40px;
+        padding: 0;
         margin: 0;
         width: 90%;
         justify-content: left;

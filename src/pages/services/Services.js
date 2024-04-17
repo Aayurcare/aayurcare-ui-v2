@@ -30,8 +30,8 @@ const Services = () => {
         highlighted={"services."}
       />
       <WelcomeToAayurSection />
-      <SectionContainerRight styles={{ marginTop: "25vh" }}>
-        <div className={styles.containerRight}>
+      <SectionContainerRight>
+        <div className={styles.callbackSection}>
           <CallbackCard />
           <br></br>
           <br></br>
@@ -56,8 +56,8 @@ const Services = () => {
       </SectionContainerRight>
       <SectionContainerLeft>
         <div
-          style={{ marginTop: isMobile ? "200vh" : "320px" }}
-          className={styles.containerRight}
+          style={{ marginTop: isMobile ? "200vw" : "20px" }}
+          className={styles.imageThreeFourContainer}
         >
           <ServiceCard
             image={ImagePatient}
@@ -79,8 +79,8 @@ const Services = () => {
       </SectionContainerLeft>
       <SectionContainerRight>
         <div
-          style={{ marginTop: isMobile ? "230vh" : "320px" }}
-          className={styles.containerRight}
+          style={{ marginTop: isMobile ? "230vh" : "20px" }}
+          className={styles.imageFiveSixContainer}
         >
           <ServiceCard
             image={ImagePhone}

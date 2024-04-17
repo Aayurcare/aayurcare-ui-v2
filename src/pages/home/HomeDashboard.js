@@ -7,8 +7,14 @@ import VitalLinks from "./sections/section4/VitalLinks";
 import WordsOfTrust from "./sections/section5/WordsOfTrust";
 import QnA from "./sections/section6/QnA";
 import Footer from "../../component/footer/Footer";
+import useIsMobile from "../../hooks/useIsMobile";
+import {
+  SectionContainerLeft,
+  SectionContainerRight,
+} from "./sections/SectionContainer";
 
 const HomeDashboard = () => {
+  const isMobile = useIsMobile();
   return (
     <HomeToolbarLayout highlighted={0}>
       <LandingHomeSection />
@@ -18,6 +24,12 @@ const HomeDashboard = () => {
       <VitalLinks />
       <WordsOfTrust />
       <QnA />
+      {/*{isMobile && (
+        <SectionContainerLeft
+          styles={{ height: "20vh" }}
+        ></SectionContainerLeft>
+      )}{" "}
+      */}
       <Footer />
     </HomeToolbarLayout>
   );

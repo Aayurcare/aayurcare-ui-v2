@@ -93,7 +93,7 @@
 }
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
-        margin: -100px 40px 0 40px;
+        margin: -60vh 40px 0 40px;
         height: 100vh;
     }
     .title{

@@ -25,7 +25,7 @@ const ServicesOffer = () => {
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>
         <img src={Banner} className={styles.topBannerImage} />
-        <p className={"title-home"}>
+        <p className={"title-home " + styles.serviceTitle}>
           We offer a range of <span className="text-blue">services</span>
         </p>
         {isMobile ? <SplideCardSection /> : <FullCardSection />}

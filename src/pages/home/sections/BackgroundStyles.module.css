@@ -1,5 +1,6 @@
 .section1Container {
     height: auto;
+    width: 100vw;
     min-height: 110vh;
     position: relative;
 }
@@ -31,9 +32,10 @@
     }
     .section1Container{
         min-height: 120vh;
+        height: auto;
     }
     .backgroundImage {
-        width: 104%;
+        width: 100%;
     }
     
 }

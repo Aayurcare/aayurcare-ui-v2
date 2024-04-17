@@ -52,22 +52,24 @@
         display: inline-block;
     }
     .contentSubContainer{
-        padding: 0 40px 0 40px;
+        padding: 0;
+        margin-top: -25vh;
         width: 90%;
+
     }
     .cardItem{
         width: 80%;
     }
     .cardTitle{
         height: auto;
-        font-size: 5vw;
+        font-size: 3vw;
     }
     .description{
-        font-size: 3vw;
+        font-size: 2vw;
     }
 }
 
-@media only screen and (max-width: 1150px) {
+/* @media only screen and (max-width: 1150px) {
     .cardTitle{
         height: auto;
         font-size: 15px;
@@ -76,4 +78,4 @@
         font-weight: 300;
         font-size: 12px;
     }
-}
+} */
