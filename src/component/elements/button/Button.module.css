@@ -1,10 +1,11 @@
 
 .button{
     background-color: #114DD2;
-    width: 100px;
+    width: auto;
     height: 40px;
     border-radius: 12px;
     color: white;
+    padding: 0 15px 0 15px;
     border-color: white;
     outline: none;
     border-style: solid;

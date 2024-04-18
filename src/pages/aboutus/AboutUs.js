@@ -18,7 +18,7 @@ const AboutUs = () => {
   const isMobile = useIsMobile();
 
   return (
-    <HomeToolbarLayout highlighted={1}>
+    <HomeToolbarLayout highlighted={3}>
       <ImagedTitleSection
         backgroundImage={BackgroundImage}
         pre_title={"Discover more "}

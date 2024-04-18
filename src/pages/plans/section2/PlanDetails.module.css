@@ -1,0 +1,63 @@
+.planDetailsContainer{
+    margin-top: -200px;
+    margin-bottom: 100px;
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.titleChip{
+    padding: 10px 20px 10px 20px;
+    border-radius: 16px;
+    margin: 0 15px 0 15px;   
+}
+.titleChip:hover{
+    cursor: pointer;
+}
+.plansContainer{
+    display: flex;
+    width: 80%;
+    padding: 40px 10% 40px 10%;
+    align-self: center;
+    margin-top: 80px;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.planCard{
+    background-color: #ffffffda;
+    padding: 10px 20px 10px 20px;
+    margin: 0 10px 0 10px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.planName{
+    font-size: 19px;
+    font-weight: 500;
+}
+.planPrice{
+    font-size: 23px;
+    font-weight: 600;
+}
+.planDays{
+    font-size: 15px;
+    color: black;
+    font-weight: 450;
+}
+.planDescription{
+    font-weight: 300;
+    font-size: 14px;
+}
+.buttonCallBack{
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .planDetailsContainer{
+        margin-top: 10px;
+    }
+}

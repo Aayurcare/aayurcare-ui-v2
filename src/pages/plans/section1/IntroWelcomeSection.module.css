@@ -1,0 +1,21 @@
+.introWelcomeContainer{
+    height: 80vh;
+    text-align: center;
+    width: 80%;
+    align-self: center;
+    padding: 0 10% 0 10%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(255,255,255,0.9010197829131653) 51%, rgba(255,255,255,0.6937368697478992) 64%, rgba(255,255,255,0) 100%);
+}
+.introSubTitle{
+    font-weight: 500;
+}
+.introDescription{
+    margin-top: 40px;
+}
+.introSecondTitle{
+    margin-top:100px;
+}
+.introSecondSubTitle{
+    font-size: 20px;
+}

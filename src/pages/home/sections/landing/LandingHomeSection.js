@@ -4,9 +4,11 @@ import HomeFirstImagSM from "../../../../assets/images/home/home_first_image_sm.
 
 import ButtonPrimary from "../../../../component/elements/button/ButtonPrimary";
 import styles from "./LandingHomeSection.module.css";
+import { useNavigate } from "react-router-dom";
 
 const LandingHomeSection = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 650);
@@ -37,6 +39,7 @@ const LandingHomeSection = () => {
         <ButtonPrimary
           content={"Learn More"}
           className={styles.buttonLearnMore}
+          onClick={()=>{navigate('/plans')}}
         />
       </section>
     </div>

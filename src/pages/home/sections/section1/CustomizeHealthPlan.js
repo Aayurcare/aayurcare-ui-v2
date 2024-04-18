@@ -5,10 +5,12 @@ import backgroundStyles from "../BackgroundStyles.module.css";
 import ButtonSecondary from "../../../../component/elements/button/ButtonSecondary";
 import { SectionContainerLeft } from "../SectionContainer";
 import useIsMobile from "../../../../hooks/useIsMobile";
+import { useNavigate } from "react-router-dom";
+
 
 const CustomizeHealthPlan = () => {
   const isMobile = useIsMobile();
-
+  const navigate = useNavigate();
   return (
     <SectionContainerLeft>
       <div className={styles.contentSubContainer}>
@@ -35,6 +37,7 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
+              onClick={()=>{navigate('/plans')}}
             />
           </article>
 
@@ -48,6 +51,7 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
+              onClick={()=>{navigate('/plans')}}
             />
           </article>
           <article className={styles.cardItem}>
@@ -60,6 +64,7 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
+              onClick={()=>{navigate('/plans')}}
             />
           </article>
           <article className={styles.cardItem}>
@@ -72,6 +77,7 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
+              onClick={()=>{navigate('/plans')}}
             />
           </article>
           <article className={styles.cardItem}>
@@ -84,6 +90,7 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
+              onClick={()=>{navigate('/plans')}}
             />
           </article>
         </div>

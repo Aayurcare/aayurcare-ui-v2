@@ -94,6 +94,16 @@ const HomeHeader = ({ highlighted }) => {
                         >
                           Services
                         </Link>
+                        <Link
+                          to="/plans"
+                          style={{
+                            color: highlighted === 0 ? "#114DD2" : "black",
+                            textDecoration: "none",
+                          }}
+                          className={styles.sideMenuItem}
+                        >
+                          Plans
+                        </Link>
                       </motion.li>
                     </ul>
                     <ul className="grid gap-2">
@@ -139,23 +149,33 @@ const HomeHeader = ({ highlighted }) => {
           Home
         </Link>
         <Link
-          to="/about-us"
+          to="/services"
           style={{
             color: highlighted === 1 ? "#114DD2" : "black",
             textDecoration: "none",
           }}
         >
-          About Us
+          Services
         </Link>
         <Link
-          to="/services"
+          to="/plans"
           style={{
             color: highlighted === 2 ? "#114DD2" : "black",
             textDecoration: "none",
           }}
         >
-          Services
+          Plans
         </Link>
+        <Link
+          to="/about-us"
+          style={{
+            color: highlighted === 3 ? "#114DD2" : "black",
+            textDecoration: "none",
+          }}
+        >
+          About Us
+        </Link>
+        
       </section>
       {!isMobile && <p></p>}
       {/* Include UserIcon or other content here if needed */}

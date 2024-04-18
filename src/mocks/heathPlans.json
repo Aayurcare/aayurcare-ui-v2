@@ -1,0 +1,91 @@
+{
+    "data": [
+        {
+            "title" : "Individual",
+            "plans" : [
+                {
+                    "planName" : "Regular Plan",
+                    "price" : 899,
+                    "days" : "30 days",
+                    "description" : "Our standard plan offers tailored, comprehensive support for your needs."
+                },
+                {
+                    "planName" : "Pro Plan",
+                    "price" : 1999,
+                    "days" : "90 days",
+                    "description" : "Our Pro Plan delivers tailored, comprehensive support beyond the standard offering."
+                },
+                {
+                    "planName" : "Signature Plan",
+                    "price" : 4999,
+                    "days" : "180 days",
+                    "description" : "Our Signature Plan offers double support compared to Pro, tailored to your needs."
+                },
+                {
+                    "planName" : "wellness 365 plan",
+                    "price" : 9999,
+                    "days" : "360 days",
+                    "description" : "Our standard plan offers tailored, comprehensive support for your needs."
+                }
+            ]
+        },
+        {
+            "title" : "Family",
+            "plans" : [
+                {
+                    "planName" : "Regular Plan",
+                    "price" : 2499,
+                    "days" : "30 days",
+                    "description" : "Our standard plan offers tailored, comprehensive support for your needs."
+                },
+                {
+                    "planName" : "Pro Plan",
+                    "price" : 7599,
+                    "days" : "90 days",
+                    "description" : "Our Pro Plan delivers tailored, comprehensive support beyond the standard offering."
+                },
+                {
+                    "planName" : "Signature Plan",
+                    "price" : 14999,
+                    "days" : "180 days",
+                    "description" : "Our Signature Plan offers double support compared to Pro, tailored to your needs."
+                },
+                {
+                    "planName" : "wellness 365 plan",
+                    "price" : 29999,
+                    "days" : "360 days",
+                    "description" : "Our standard plan offers tailored, comprehensive support for your needs."
+                }
+            ]
+        },
+        {
+            "title" : "Senior Citizen",
+            "plans" : [
+                {
+                    "planName" : "Regular Plan",
+                    "price" : 1499,
+                    "days" : "30 days",
+                    "description" : "Our standard plan offers tailored, comprehensive support for your needs."
+                },
+                {
+                    "planName" : "Pro Plan",
+                    "price" : 4999,
+                    "days" : "90 days",
+                    "description" : "Our Pro Plan delivers tailored, comprehensive support beyond the standard offering."
+                },
+                {
+                    "planName" : "Signature Plan",
+                    "price" : 8999,
+                    "days" : "180 days",
+                    "description" : "Our Signature Plan offers double support compared to Pro, tailored to your needs."
+                },
+                {
+                    "planName" : "wellness 365 plan",
+                    "price" : 19999,
+                    "days" : "360 days",
+                    "description" : "Our standard plan offers tailored, comprehensive support for your needs."
+                }
+            ]
+        }
+    ]
+}
