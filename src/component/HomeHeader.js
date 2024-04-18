@@ -94,6 +94,20 @@ const HomeHeader = ({ highlighted }) => {
                         >
                           Services
                         </Link>
+                      </motion.li>
+                    </ul>
+                    <ul className="grid gap-2">
+                      <motion.li
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 260,
+                          damping: 20,
+                          delay: 0.1 + 3 / 10,
+                        }}
+                        className="w-full p-[0.08rem] rounded-xl bg-gradient-to-tr from-neutral-800 via-neutral-950 to-neutral-700"
+                      >
                         <Link
                           to="/plans"
                           style={{
@@ -175,7 +189,6 @@ const HomeHeader = ({ highlighted }) => {
         >
           About Us
         </Link>
-        
       </section>
       {!isMobile && <p></p>}
       {/* Include UserIcon or other content here if needed */}
