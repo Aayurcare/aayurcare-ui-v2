@@ -38,7 +38,7 @@ const JourneySection = () => {
         <FeatureCards />
 
         <p className={styles.subTitle}>Vision</p>
-        <p>
+        <p className={styles.textContent}>
           To be the leading provider of innovative and efficient reimbursement
           solutions, ensuring seamless financial processes for healthcare
           providers and patients. Our vision is to emerge as the foremost
@@ -53,7 +53,7 @@ const JourneySection = () => {
           and dedication.
         </p>
         <p className={styles.subTitle}>Mission</p>
-        <p>
+        <p className={styles.textContent}>
           Our mission is to revolutionize the healthcare industry by simplifying
           and optimizing the reimbursement process, ultimately driving increased
           revenue for healthcare providers while simultaneously enhancing access

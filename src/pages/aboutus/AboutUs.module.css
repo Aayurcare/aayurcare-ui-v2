@@ -21,4 +21,5 @@
 
 .textContent{
     height: max-content;
+    text-align: start;
 }

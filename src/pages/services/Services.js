@@ -23,7 +23,7 @@ const Services = () => {
   const isMobile = useIsMobile();
 
   return (
-    <HomeToolbarLayout highlighted={1}>
+    <HomeToolbarLayout highlighted={2}>
       <ImagedTitleSection
         backgroundImage={BackgroundImage}
         pre_title={"Elevate your wellbeing through our "}

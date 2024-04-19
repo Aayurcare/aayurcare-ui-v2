@@ -163,22 +163,22 @@ const HomeHeader = ({ highlighted }) => {
           Home
         </Link>
         <Link
-          to="/services"
+          to="/plans"
           style={{
             color: highlighted === 1 ? "#114DD2" : "black",
             textDecoration: "none",
           }}
         >
-          Services
+          Plans
         </Link>
         <Link
-          to="/plans"
+          to="/services"
           style={{
             color: highlighted === 2 ? "#114DD2" : "black",
             textDecoration: "none",
           }}
         >
-          Plans
+          Services
         </Link>
         <Link
           to="/about-us"

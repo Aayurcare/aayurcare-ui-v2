@@ -3,7 +3,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 85%;
     height: max-content;
 }
 .cardLogoContainer{
@@ -17,7 +17,10 @@
     width: 100px;
     margin: 10px 10px 10px 10px;
 }
+.textContent{
+    text-align: start;
 
+}
 @media only screen and (max-width: 650px) {
     .contentContainer{
         margin-top: 70vh;

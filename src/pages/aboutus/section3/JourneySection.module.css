@@ -59,7 +59,9 @@
   .featureTitle{
     font-size: 16px;
   }
-  
+  .textContent{
+    text-align: start;
+  }
   @media only screen and (max-width: 650px) {
     .buildingContainer{
       height: auto;
