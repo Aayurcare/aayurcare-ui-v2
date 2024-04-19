@@ -7,7 +7,6 @@ import { SectionContainerLeft } from "../SectionContainer";
 import useIsMobile from "../../../../hooks/useIsMobile";
 import { useNavigate } from "react-router-dom";
 
-
 const CustomizeHealthPlan = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
@@ -37,21 +36,25 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
-              onClick={()=>{navigate('/plans')}}
+              onClick={() => {
+                navigate("/plans");
+              }}
             />
           </article>
 
           <article className={styles.cardItem}>
-            <p className={styles.cardTitle}>Couples Plan</p>
+            <p className={styles.cardTitle}>Maternally Plan</p>
             <p className={styles.cardDescription}>
-              For happy couples embracing life, we present our
-              <span className="text-blue">&nbsp;Couples Plan</span>. Let us
-              support your well-being journey together.
+              Introducing our Maternally Plan, designed to nurture expectant
+              <span className="text-blue">&nbsp;mothers</span>. Let us through
+              every stage of their journey towards motherhood.
             </p>
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
-              onClick={()=>{navigate('/plans')}}
+              onClick={() => {
+                navigate("/plans");
+              }}
             />
           </article>
           <article className={styles.cardItem}>
@@ -64,7 +67,9 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
-              onClick={()=>{navigate('/plans')}}
+              onClick={() => {
+                navigate("/plans");
+              }}
             />
           </article>
           <article className={styles.cardItem}>
@@ -77,7 +82,9 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
-              onClick={()=>{navigate('/plans')}}
+              onClick={() => {
+                navigate("/plans");
+              }}
             />
           </article>
           <article className={styles.cardItem}>
@@ -90,7 +97,9 @@ const CustomizeHealthPlan = () => {
             <ButtonSecondary
               styles={{ alignSelf: "center" }}
               content={"Know More"}
-              onClick={()=>{navigate('/plans')}}
+              onClick={() => {
+                navigate("/plans");
+              }}
             />
           </article>
         </div>
