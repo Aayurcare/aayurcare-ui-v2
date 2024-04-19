@@ -15,29 +15,28 @@ const WhyAayurCare = () => {
           <span className={styles.rightElement}>
             <p className={styles.innerNumber}>1</p>
             <p className={styles.innerText}>
-              Activate your health card within 48 hours to ensure you can
-              quickly access the benefits it offers.
+              Financial Protection: Covers medical costs, shielding from
+              unexpected expenses.
             </p>
           </span>
           <span className={styles.leftElement}>
             <p className={styles.innerNumber}>2</p>
             <p className={styles.innerText}>
-              Activate your health card within 48 hours to ensure you can
-              quickly access the benefits it offers.
+              Freedom of Choice: Choose providers freely, ensuring access to
+              needed care.
             </p>
           </span>
           <span className={styles.rightElement}>
             <p className={styles.innerNumber}>3</p>
             <p className={styles.innerText}>
-              Activate your health card within 48 hours to ensure you can
-              quickly access the benefits it offers.
+              Tax Savings: Contributions are tax-deductible, saving money.
             </p>
           </span>
           <span className={styles.leftElement}>
             <p className={styles.innerNumber}>4</p>
             <p className={styles.innerText}>
-              Activate your health card within 48 hours to ensure you can
-              quickly access the benefits it offers.
+              Complete Coverage: Includes doctor visits, hospital stays, meds,
+              and preventive care.
             </p>
           </span>
           <span className={styles.rightElement}>
@@ -50,8 +49,8 @@ const WhyAayurCare = () => {
           <span className={styles.leftElement}>
             <p className={styles.innerNumber}>6</p>
             <p className={styles.innerText}>
-              Activate your health card within 48 hours to ensure you can
-              quickly access the benefits it offers.
+              Personalized Care: Control in selecting doctors and treatments as
+              per preference.
             </p>
           </span>
         </div>

@@ -47,9 +47,10 @@ const CollapsibleSection = () => {
         onTriggerClosing={() => toggleExpanded(0)}
       >
         <p>
-          Our health membership plan encompasses a comprehensive package of
-          health and wellness services, covering preventive care, telemedicine,
-          and more.
+          The membership plan typically includes OPD consultations with the
+          primary doctory, access to pathology and radiology services, as well
+          as provision for medicines. However, the specifics may vary depending
+          on the chosen plan.
         </p>
       </Collapsible>
       <hr className={styles.qnaHR} />
@@ -77,9 +78,8 @@ const CollapsibleSection = () => {
         onTriggerClosing={() => toggleExpanded(2)}
       >
         <p>
-          Our health membership plan encompasses a comprehensive package of
-          health and wellness services, covering preventive care, telemedicine,
-          and more.
+          There is no waiting period for accessing the benefits included in the
+          membership plan.
         </p>
       </Collapsible>
       <hr className={styles.qnaHR} />

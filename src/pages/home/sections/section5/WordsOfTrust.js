@@ -32,21 +32,21 @@ const WordsOfTrust = () => {
         </p>
         <Flickity options={flickityOptions}>
           <TestimonialCard
-            name={"One"}
+            name={"Sam"}
             comment={
               "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
             }
           />
           <TestimonialCard
-            name={"One"}
+            name={"Ancy"}
             comment={
-              "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
+              "I'm not technically minded, but Ayur Care is very easy to use. my health"
             }
           />
           <TestimonialCard
-            name={"One"}
+            name={"Sanal Das"}
             comment={
-              "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
+              "This healthcare plan is a game-changer! The website made everything clear and simple. My family's health is now in safe hands."
             }
           />
         </Flickity>
