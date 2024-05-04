@@ -60,4 +60,20 @@
     .planDetailsContainer{
         margin-top: 10px;
     }
+    .planDetailsContainer{
+        height: 120vh;
+        margin-bottom: 200px;
+    }
+    .titleChip{
+        width: auto;
+        margin: 0;
+    }
+    .plansContainer{
+        flex-direction: column;
+        margin-top: 0px;
+        overflow: inherit;
+    }
+    .planCard{
+        margin-top: 20px;
+    }
 }
