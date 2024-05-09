@@ -67,7 +67,7 @@
       height: auto;
     }
     .journeySection{
-      margin-top: 160vh;
+      margin-top: 100vh;
     }
     .title{
       font-size: 6vw;
@@ -92,8 +92,7 @@
         font-size: 3vw;
     }
     .featureCard{
-      padding: 10px 15px 0px 15px;
-
+      padding: 10px 4px 10px 4px;
       text-align: center;
       margin: 10px;
       height: auto;

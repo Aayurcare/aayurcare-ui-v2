@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: space-between;
     width: auto;
+    display: none;
     align-self: center;
 }
 .logoPartners{
@@ -23,7 +24,7 @@
 }
 @media only screen and (max-width: 650px) {
     .contentContainer{
-        margin-top: 70vh;
+        margin-top: 50vh;
         padding: 0 20px 0 20px;
         height: max-content;
     }

@@ -97,7 +97,7 @@
 
 @media only screen and (max-width: 650px) {
   .container{
-    margin-top: 130vh;
+    margin-top: 70vh;
   }
   .subSectionEnquiry{
     flex-direction: column;

@@ -68,33 +68,9 @@ const AboutUs = () => {
       <PartnershipSection />
       {isMobile && <SectionContainerRight></SectionContainerRight>}
       {isMobile && <SectionContainerLeft></SectionContainerLeft>}
-      {isMobile && <SectionContainerRight></SectionContainerRight>}
-      {/* {isMobile && (
-        <SectionContainerLeft
-          styles={{ minHeight: "50vh !important" }}
-        ></SectionContainerLeft>
-      )} */}
       <Footer />
     </HomeToolbarLayout>
   );
 };
-
-// const DiscoverMore = () => {
-//   return (
-//     <div className={styles.firstContainer}>
-//       <img
-//         src={BackgroundImage}
-//         alt="discover-more"
-//         className={styles.firstContainerBackground}
-//       />
-//       <h6
-//         className={styles.fistCenterText}
-//         style={{ alignSelf: "center", justifySelf: "center" }}
-//       >
-//         Discover more <span className="text-blue">about us.</span>
-//       </h6>
-//     </div>
-//   );
-// };
 
 export default AboutUs;
