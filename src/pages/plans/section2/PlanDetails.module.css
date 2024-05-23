@@ -1,5 +1,5 @@
 .planDetailsContainer{
-    margin-top: 0px;
+    
     margin-bottom: 100px;
     height: 67vh;
     display: flex;
@@ -30,7 +30,6 @@
     margin: 0 10px 0 10px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -51,9 +50,10 @@
 .planDescription{
     font-weight: 300;
     font-size: 14px;
+    height: 100px;
 }
 .buttonCallBack{
-    display: none;
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 650px) {

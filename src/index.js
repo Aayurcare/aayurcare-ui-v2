@@ -11,6 +11,8 @@ import Career from "./pages/career/Career";
 import Blog from "./pages/blog/Blog";
 import Help from "./pages/help/Help";
 import Plans from "./pages/plans/Plans";
+import Modal from "react-modal";
+import ReactModal from "react-modal";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,9 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+ReactModal.setAppElement("#root");
+
 root.render(
   <React.StrictMode>
     <Helmet>
