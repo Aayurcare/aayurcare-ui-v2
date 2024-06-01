@@ -160,7 +160,7 @@ const HomeHeader = ({ highlighted }) => {
             textDecoration: "none",
           }}
         >
-          Home11
+          Home
         </Link>
         <Link
           to="/plans"
