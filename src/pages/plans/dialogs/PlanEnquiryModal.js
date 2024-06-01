@@ -37,7 +37,7 @@ const PlanEnquiryModal = ({ isOpen, plan, setIsOpen }) => {
       >
         <div className={styles.modalContainer}>
           <ImageContainer setIsOpen={setIsOpen} plan={plan} />
-          <FormContainer plan={plan} />
+          <FormContainer plan={plan} setIsOpen={setIsOpen} />
         </div>
       </Modal>
       <ToastContainer />
@@ -183,9 +183,7 @@ const FormContainer = ({ plan, setIsOpen }) => {
           });
           setIsOpen(false);
         }
-      } catch (error) {
-        alert("Please try again.");
-      }
+      } catch (error) {}
     } else {
       setErrors(formErrors);
     }

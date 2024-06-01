@@ -1,3 +1,5 @@
+import { ENQUIRY } from "./urls";
+
 const postFormPlanEnquiry = async (data) => {
   try {
     const requestOptions = {
@@ -5,10 +7,7 @@ const postFormPlanEnquiry = async (data) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     };
-    const response = await fetch(
-      "http://localhost:3001/v1/plans/enquiry",
-      requestOptions
-    );
+    const response = await fetch(ENQUIRY, requestOptions);
     if (!response.ok) {
       throw Error(`Error occured with status ${response.status}`);
     }

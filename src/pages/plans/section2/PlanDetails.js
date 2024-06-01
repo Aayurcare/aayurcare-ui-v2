@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import ButtonPrimary from "../../../component/elements/button/ButtonPrimary";
 import useIsMobile from "../../../hooks/useIsMobile";
 import PlanEnquiryModal from "../dialogs/PlanEnquiryModal";
+import { PLANS_URL } from "../../../api/urls";
 
 const PlanDetails = () => {
   const [plans, setPlans] = useState(null);
@@ -22,7 +23,7 @@ const PlanDetails = () => {
 
   async function fetchPlans() {
     try {
-      const response = await fetch("http://localhost:3001/v1/plans");
+      const response = await fetch(PLANS_URL);
       if (!response.ok) {
         throw new Error("Unable to fetch plans");
       }
