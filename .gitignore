@@ -11,6 +11,7 @@
 # production
 /build
 package-lock.json
+.VSCodeCounter
 
 # misc
 .DS_Store

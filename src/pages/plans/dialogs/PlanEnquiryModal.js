@@ -12,6 +12,8 @@ import MedicineIcon from "../../../assets/icons/modal/medicine.svg";
 import PathologyIcon from "../../../assets/icons/modal/pathology.svg";
 import RadiologyIcon from "../../../assets/icons/modal/radiology.svg";
 import VirutalCardIcon from "../../../assets/icons/modal/virtual_card.svg";
+import { Bounce, toast, ToastContainer } from "react-toastify";
+import { postFormPlanEnquiry } from "../../../api/enquiryAPI";
 
 const PlanEnquiryModal = ({ isOpen, plan, setIsOpen }) => {
   const customStyles = {
@@ -38,6 +40,7 @@ const PlanEnquiryModal = ({ isOpen, plan, setIsOpen }) => {
           <FormContainer plan={plan} />
         </div>
       </Modal>
+      <ToastContainer />
     </div>
   );
 };
@@ -116,13 +119,14 @@ const ImageContainer = ({ plan, setIsOpen }) => {
   );
 };
 
-const FormContainer = ({ plan }) => {
+const FormContainer = ({ plan, setIsOpen }) => {
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
     email: "",
     age: "",
     language: "pref",
+    planId: plan._id,
   });
 
   const [errors, setErrors] = useState({});
@@ -163,6 +167,25 @@ const FormContainer = ({ plan }) => {
     e.preventDefault();
     const formErrors = validate();
     if (Object.keys(formErrors).length === 0) {
+      try {
+        const response = postFormPlanEnquiry(formData);
+        if (response) {
+          toast.success("Thank you, We will get back to you", {
+            position: "top-right",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+          setIsOpen(false);
+        }
+      } catch (error) {
+        alert("Please try again.");
+      }
     } else {
       setErrors(formErrors);
     }
