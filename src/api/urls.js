@@ -1,9 +1,7 @@
-const BASE_URL = process.env.BASEURL
-  ? process.env.BASEURL
-  : "http://localhost:8081";
-
+const BASE_URL = "https://api.aayurcare.com";
 if (process.env.DEV) {
   if (process.env.DEV === "true") {
+    console.log("Dev mode, setting base api url to localhost");
     BASE_URL = "http://localhost:8081";
   }
 }
