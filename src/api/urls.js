@@ -1,5 +1,6 @@
-const BASE_URL =
-  "http://core-api-2-env.eba-rqgbgz3y.eu-north-1.elasticbeanstalk.com";
+const BASE_URL = process.env.BASEURL
+  ? process.env.BASEURL
+  : "http://localhost:8081";
 
 const ENQUIRY = `${BASE_URL}/v1/plans/enquiry`;
 
