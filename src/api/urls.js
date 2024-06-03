@@ -2,6 +2,12 @@ const BASE_URL = process.env.BASEURL
   ? process.env.BASEURL
   : "http://localhost:8081";
 
+if (process.env.DEV) {
+  if (process.env.DEV === "true") {
+    BASE_URL = "http://localhost:8081";
+  }
+}
+
 const ENQUIRY = `${BASE_URL}/v1/plans/enquiry`;
 
 const PLANS_URL = `${BASE_URL}/v1/plans`;
