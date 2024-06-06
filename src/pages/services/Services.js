@@ -69,10 +69,10 @@ const Services = () => {
           />
           <ServiceCard
             image={ImageStairs}
-            title={"No wait period"}
+            title={"No waiting period"}
             image_alignment={"right"}
             description={
-              "Experience the freedom of immediate access to healthcare benefits with our \"No Wait Period\" policy. Say goodbye to the frustration of waiting periods typically associated with health insurance plans. With us, there's no waiting around when it comes to accessing the care you need. Whether you're seeking routine check-ups, specialist consultations, or diagnostic procedures, our policy ensures that you can utilize your benefits from day one of enrollment."
+              "Experience the freedom of immediate access to healthcare benefits with our \"No Waiting Period\" policy. Say goodbye to the frustration of waiting periods typically associated with health insurance plans. With us, there's no waiting around when it comes to accessing the care you need. Whether you're seeking routine check-ups, specialist consultations, or diagnostic procedures, our policy ensures that you can utilize your benefits from day one of enrollment."
             }
           />
         </div>

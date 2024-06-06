@@ -7,7 +7,9 @@ import styles from "./WelcomeToAayurSection.module.css";
 
 const WelcomeToAayurSection = () => {
   return (
-    <SectionContainerLeft styles={{ marginTop: "20vh", zIndex: -2 }}>
+    <SectionContainerLeft
+      styles={{ marginTop: "20vh", zIndex: -100, minHeight: "100vh" }}
+    >
       <div className={styles.container}>
         <p className="subTitle">
           Welcome to AAYUR CARE: Your Path to{" "}

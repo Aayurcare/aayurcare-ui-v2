@@ -17,12 +17,13 @@ import {
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import useIsMobile from "../../../../hooks/useIsMobile";
+import { useNavigate } from "react-router-dom";
 
 const ServicesOffer = () => {
   const isMobile = useIsMobile();
 
   return (
-    <SectionContainerLeft>
+    <SectionContainerLeft styles={{ minHeight: "100vh" }}>
       <div className={styles.contentSubContainer}>
         <img src={Banner} className={styles.topBannerImage} />
         <p className={"title-home " + styles.serviceTitle}>
@@ -105,16 +106,30 @@ const FullCardSection = () => {
 };
 
 const ServicesCard = ({ image, title, description }) => {
+  const navigate = useNavigate();
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={() => {
+        console.log("click");
+        navigate("/plans");
+      }}
+    >
       <div className={styles.cardHeader}>
         <img className={styles.cardImage} src={image} />
         <p className={styles.cardTitle}>{title}</p>
         <div className={styles.cardGradient}></div>
       </div>
+
       <div className={styles.cardBody}>
         <p className={styles.cardDescription}>{description}</p>
-        <ButtonPrimary content={"Know More"} />
+        <ButtonPrimary
+          content={"Know More"}
+          onClick={() => {
+            console.log("click");
+            navigate("/plans");
+          }}
+        />
       </div>
     </div>
   );

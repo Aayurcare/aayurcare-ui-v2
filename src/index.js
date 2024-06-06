@@ -82,7 +82,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 ReactModal.setAppElement("#root");
 
 root.render(
-  <div>
+  <React.StrictMode>
     <Helmet>
       <title>Aayurcare</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -98,7 +98,7 @@ root.render(
       />
     </Helmet>
     <RouterProvider router={router} />
-  </div>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -82,6 +82,14 @@ const Footer = () => {
         >
           Terms of Use
         </p>
+        <p
+          className={`${styles.termsOfUse} ${styles.clickable}`}
+          onClick={() => {
+            navigate("/about-us/cancellation-refund");
+          }}
+        >
+          Refund & Cancellation
+        </p>
       </section>
     </footer>
   );

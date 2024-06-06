@@ -5,6 +5,7 @@
     height: 100vh;
 }
 
+
 .left{
     display: flex;
     align-items: start;
@@ -30,12 +31,13 @@
 }
 
 .right{
-    padding-top: 50px;
     display: flex;
     align-items: start;
-    margin-top: 7vh;
+    margin-top: -80px;
+    justify-content: center;
     flex-direction: column;
 }
+
 
 .image{
     height: 90vh;
@@ -44,6 +46,9 @@
 
 .description{
     color: #000000af;
+    margin-left: 4px;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 650px) {

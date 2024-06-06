@@ -6,6 +6,7 @@
     border-radius: 12px;
     color: white;
     padding: 0 15px 0 15px;
+    z-index: 1000;
     border-color: white;
     outline: none;
     border-style: solid;
@@ -21,4 +22,8 @@
     border-radius: 10px;
     outline: none;
     border-style: solid;
+}
+
+.button:hover{
+    cursor: pointer;
 }

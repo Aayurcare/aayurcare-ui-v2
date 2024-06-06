@@ -1,5 +1,8 @@
 .planDetailsContainer{
+    margin-bottom: 100px;
+    height: 67vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 .titleChip{

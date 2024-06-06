@@ -1,7 +1,8 @@
 .section1Container {
     height: auto;
-    width: 100vw;
-    min-height: 110vh;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -100;
     position: relative;
 }
 
@@ -18,10 +19,8 @@
     z-index: -100;
     margin-top: -15vh;
     padding-top: 15vh;
-    position: absoute;
     display: flex;
     justify-content: center;
-    top: 10vh;
     left: 0;
 }
 

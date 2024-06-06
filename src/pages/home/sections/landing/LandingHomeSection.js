@@ -39,7 +39,9 @@ const LandingHomeSection = () => {
         <ButtonPrimary
           content={"Learn More"}
           className={styles.buttonLearnMore}
-          onClick={()=>{navigate('/plans')}}
+          onClick={() => {
+            navigate("/plans");
+          }}
         />
       </section>
     </div>
