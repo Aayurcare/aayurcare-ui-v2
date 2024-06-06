@@ -8,8 +8,11 @@ import FacebookIcon from "../../assets/icons/facebook.svg";
 import TwitterIcon from "../../assets/icons/twitter.svg";
 import LinkedinIcon from "../../assets/icons/linkedin.svg";
 import InstagramIcon from "../../assets/icons/instagram.svg";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.topSection}>
@@ -63,8 +66,22 @@ const Footer = () => {
         <p className={styles.copyright}>
           Copyright © 2024. Aayurcare. All rights reserved.
         </p>
-        <p className={styles.privacy}>Privacy Policy</p>
-        <p className={styles.termsOfUse}>Terms of Use</p>
+        <p
+          className={`${styles.privacy} ${styles.clickable}`}
+          onClick={() => {
+            navigate("/about-us/privacy-policy");
+          }}
+        >
+          Privacy Policy
+        </p>
+        <p
+          className={`${styles.termsOfUse} ${styles.clickable}`}
+          onClick={() => {
+            navigate("/about-us/terms-and-conditions");
+          }}
+        >
+          Terms of Use
+        </p>
       </section>
     </footer>
   );

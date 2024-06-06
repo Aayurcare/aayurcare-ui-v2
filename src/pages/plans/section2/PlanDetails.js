@@ -35,7 +35,6 @@ const PlanDetails = () => {
   }
 
   const changeSelection = (index) => {
-    console.log("Set " + index);
     setSelected(index);
   };
 
@@ -62,6 +61,20 @@ const PlanDetails = () => {
             <Plan plan={item} key={index} />
           ))}
         </section>
+        <p
+          style={{
+            textAlign: "center",
+            width: "80%",
+            alignSelf: "center",
+            color: "#444",
+            fontSize: "14px",
+          }}
+        >
+          * Disclaimer-Aayur Care provides medical reimbursement plans at
+          concessional or subsidized rates. Depending on customer requirements,
+          these plans may or may not be classified as insurance products or
+          offerings.
+        </p>
       </div>
     </SectionContainerRight>
   );

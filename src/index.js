@@ -14,6 +14,8 @@ import Plans from "./pages/plans/Plans";
 import Modal from "react-modal";
 import ReactModal from "react-modal";
 
+import PDFPage from "./component/pdfviewer/PDFViewer";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +45,36 @@ const router = createBrowserRouter([
     path: "/help",
     element: <Help />,
   },
+  {
+    path: "/about-us/privacy-policy",
+    element: (
+      <PDFPage
+        url={
+          "https://pdfdocs-saayurcare.s3.eu-north-1.amazonaws.com/Privacy+Policy++(Website+%26+APP).pdf"
+        }
+      />
+    ),
+  },
+  {
+    path: "/about-us/cancellation-refund",
+    element: (
+      <PDFPage
+        url={
+          "https://pdfdocs-saayurcare.s3.eu-north-1.amazonaws.com/CANCELLATION+%26+REFUND+POLICY.pdf"
+        }
+      />
+    ),
+  },
+  {
+    path: "/about-us/terms-and-conditions",
+    element: (
+      <PDFPage
+        url={
+          "https://pdfdocs-saayurcare.s3.eu-north-1.amazonaws.com/T%26C+-+WEBSITE.pdf"
+        }
+      />
+    ),
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -50,7 +82,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 ReactModal.setAppElement("#root");
 
 root.render(
-  <React.StrictMode>
+  <div>
     <Helmet>
       <title>Aayurcare</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,7 +98,7 @@ root.render(
       />
     </Helmet>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

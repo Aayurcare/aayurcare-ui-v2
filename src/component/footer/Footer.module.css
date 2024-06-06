@@ -54,6 +54,9 @@
     margin: 0 5px 0 5px;
 }
 
+.clickable:hover{
+    cursor: pointer;
+}
 @media only screen and (max-width: 650px) {
     .footerContainer{
         height: auto;
