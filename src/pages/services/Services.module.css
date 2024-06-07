@@ -8,7 +8,6 @@
     width: 49%;
 }
 .containerRight{
-    height: 120vh;
     display: flex;
     margin-top: 0px;
     flex-direction: column;
@@ -39,29 +38,8 @@
     font-weight: 600;
 }
 
-.callbackSection{
-    align-self: center;
-    margin-top: 100px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.imageThreeFourContainer{
-    display: flex;
-    flex-direction: column;
-    margin-top: -200px;
-}
-.imageFiveSixContainer{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
-
 @media only screen and (max-width: 650px) {
-    .containerRight{
-        margin-top: 150vh;
-    }
+  
     .serviceArticle{
         width: 100%;
         margin: 10px 20px 5px 20px;
@@ -79,13 +57,5 @@
     .serviceDescription{
         font-size: 3vw;
     }
-    .callbackSection{
-        margin-top: 450vh;
-    }
-    .imageThreeFourContainer{
-        margin-top: 255vh !important;
-    }
-    .imageFiveSixContainer{
-        margin-top: 280vh !important;
-    }
+       
 }

@@ -23,87 +23,32 @@ const WordsOfTrust = () => {
   };
 
   return (
-    <SectionContainerLeft>
-      <div className={styles.contentSubContainer}>
-        <p className="title-home">
-          Words of Trust and Satisfaction:
-          <br />
-          <span className="text-blue">Testimonials.</span>
-        </p>
-        <Flickity options={flickityOptions}>
-          <TestimonialCard
-            name={"Sam"}
-            comment={
-              "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
-            }
-          />
-          <TestimonialCard
-            name={"Ancy"}
-            comment={
-              "I'm not technically minded, but Ayur Care is very easy to use. my health"
-            }
-          />
-          <TestimonialCard
-            name={"Sanal Das"}
-            comment={
-              "This healthcare plan is a game-changer! The website made everything clear and simple. My family's health is now in safe hands."
-            }
-          />
-        </Flickity>
-        {/* <section
-          className={styles.testimonies + " caruosel"}
-          data-flickity='{ "wrapAround": true }'
-        >
-          <TestimonialCard
-            name={"One"}
-            comment={
-              "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
-            }
-          />
-          <TestimonialCard
-            name={"Rahul"}
-            comment={
-              "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
-            }
-          />
-          <TestimonialCard
-            name={"Rahul"}
-            comment={
-              "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
-            }
-          />
-        </section> */}
-        {/* <section className={styles.testimonies}>
-          <Flickity
-            className={styles.flickityContainer} // Apply custom class to Flickity component
-            elementType={"div"} // default 'div'
-            // options={flickityOptions} // Flickity options object
-            disableImagesLoaded={false} // default false
-            reloadOnUpdate={true} // default false
-            static={false} // default false
-          >
-            <TestimonialCard
-              name={"One"}
-              comment={
-                "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
-              }
-            />
-            <TestimonialCard
-              name={"Rahul"}
-              comment={
-                "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
-              }
-            />
-            <TestimonialCard
-              name={"Rahul"}
-              comment={
-                "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
-              }
-            />
-          </Flickity>
-        </section> */}
-      </div>
-    </SectionContainerLeft>
+    <div className={styles.contentSubContainer}>
+      <p className={`${styles.titles} title-home`}>
+        Words of Trust and Satisfaction:<br></br>
+        <span className="text-blue">Testimonials.</span>
+      </p>
+      <Flickity options={flickityOptions}>
+        <TestimonialCard
+          name={"Sam"}
+          comment={
+            "Quick Responses from Support - I had a technical issue once, and their support team resolved it promptly. Excellent customer service!."
+          }
+        />
+        <TestimonialCard
+          name={"Ancy"}
+          comment={
+            "I'm not technically minded, but Ayur Care is very easy to use. my health"
+          }
+        />
+        <TestimonialCard
+          name={"Sanal Das"}
+          comment={
+            "This healthcare plan is a game-changer! The website made everything clear and simple. My family's health is now in safe hands."
+          }
+        />
+      </Flickity>
+    </div>
   );
 };
 

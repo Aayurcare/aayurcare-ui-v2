@@ -5,12 +5,10 @@ import FranchiseEnquiryImg from "../../../assets/images/aboutus/franchise_enquir
 import { ToastContainer, toast, Bounce } from "react-toastify";
 const FranchiseEnquirySection = () => {
   return (
-    <SectionContainerRight>
-      <div className={styles.container}>
-        <EnquiryCard />
-        <Cards />
-      </div>
-    </SectionContainerRight>
+    <div className={styles.container}>
+      <EnquiryCard />
+      <Cards />
+    </div>
   );
 };
 

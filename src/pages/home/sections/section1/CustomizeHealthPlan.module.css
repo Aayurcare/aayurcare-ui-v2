@@ -6,29 +6,25 @@
     backdrop-filter: blur(9.6px);
     -webkit-backdrop-filter: blur(9.6px);
     border: 1px solid rgba(255, 255, 255, 0.13);
-    
     flex-direction: column;
     border-radius: 20px;
     display: flex;
     padding : 8px 20px 10px 20px;
     margin: 0px 10px 30px 10px;
-    
     font-size: 19px;
-    height: auto;
+    height: 200px;
     justify-content: space-evenly;
 }
 
 .cardDescription{
     height: auto;
+    font-size: 14px;
 }
 .cardTitle{
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 0;
     align-self: flex-start;
-}
-.cardDescription{
-    font-size: 14px;
 }
 
 .cardButton{
@@ -37,14 +33,14 @@
 }
 
 .contentSubContainer {
-    width: 100%;
     align-self: center;
-    padding: 80px;
     margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
+    width: 90%;
     align-items: left;
     flex-direction: row;
+    
     justify-content: space-around;
 }
 .cardSection{
@@ -60,7 +56,7 @@
         margin: 0;
         width: 90%;
         justify-content: left;
-        margin-top: -50vh;
+        margin-top: -10vh;
     }
     
     .cardItem {
@@ -77,7 +73,7 @@
         align-self: center;
     }
     .cardDescription{
-        width: 60vw;
+        width: 250px;
     }
 }
 

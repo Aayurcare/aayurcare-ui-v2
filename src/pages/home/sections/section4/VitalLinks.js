@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import BackgroundVector from "../../../../assets/images/home/vector1.png";
-import backgroundStyles from "./../BackgroundStyles.module.css";
 import styles from "./VitalLinks.module.css";
 import "@splidejs/react-splide/css";
 
@@ -23,15 +21,13 @@ const VitalLinks = () => {
     });
   }, []);
   return (
-    <SectionContainerRight>
-      <div className={styles.contentSubContainer}>
-        <p className="title-home">
-          Vital Links: Ensuring Your{isMobile && <br></br>} Wellbeing is{" "}
-          <span className="text-blue">Our Promise.</span>
-        </p>
-        {!isMobile ? <FullCardSection /> : <MobileCardSection />}
-      </div>
-    </SectionContainerRight>
+    <div className={styles.contentSubContainer}>
+      <p className="title-home">
+        Vital Links: Ensuring Your{isMobile && <br></br>} Wellbeing is{" "}
+        <span className="text-blue">Our Promise.</span>
+      </p>
+      {!isMobile ? <FullCardSection /> : <MobileCardSection />}
+    </div>
   );
 };
 

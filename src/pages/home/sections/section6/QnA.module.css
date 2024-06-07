@@ -1,16 +1,14 @@
 .contentSubContainer{
-    position: relative;
-    margin-top: -100px;
+    margin-top: 20vh;
     display: flex;
-    justify-content: start;
-    width: 100%;
-    margin-left: 80px;
-    display: flex;
+    width: 90%;
+    align-self: center;
     flex-direction: column;
 }
 
 .collapsableSection{
     width: 70%;
+    margin-top: 100px;
     align-self: center;
 }
 
@@ -93,8 +91,8 @@
 }
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
-        margin: -60vh 40px 0 40px;
-        height: 100vh;
+        margin: 0vh 40px 0 40px;
+        
     }
     .title{
         font-size: 25px;

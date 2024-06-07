@@ -1,20 +1,15 @@
 
 .contentSubContainer{
     display: flex;
-    margin-top: 50px;
+    margin-top: 150px;
     flex-direction: column;
-    width: 100%;
-    padding: 0px 80px 0 80px;
+    height: 60vh;
+    width: 90%;
     margin-top: 120px;
+    justify-content: center;
+    align-self: center;
 }
 
-
-.title{
-    margin-top: 100px;
-    padding-left: 80px;
-    font-size: 37px;
-    padding-right: 80px;
-}
 
 .testimonies {
     display: flex;
@@ -56,16 +51,17 @@
 
 .testimonialCard{
     text-align: center;
-    margin: 10px;
+    margin: 50px 40px 50px 40px;
     padding: 10px 30px 30px 30px;
     z-index: 1;
-    width: 100%;
+    width: 80%;
+    align-self: center;
     background-color: rgba(247, 250, 255, 1);
 }
 
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
-        margin-top: -40vh;
+        
         padding: 0 40px 0 40px;
     }
     .title{

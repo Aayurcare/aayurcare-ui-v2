@@ -1,20 +1,19 @@
 .contentSubContainer{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-left: 60px;
-    margin-right: 60px;
-    align-self: center;
+    width: 90%;
     margin-top: 80px;
+    align-self: center;
     justify-content: center;
-    max-width: 1400px;
+    height: 70vh;
     align-items: start;
-
+    align-self: center;
 }
 .tableItems{
     display: flex;
     flex-direction: column;
     width: 85%;
+    margin-top: 80px;
     align-self: center;
 }
 .whyAayurTitle{
@@ -48,8 +47,7 @@
 
 @media only screen and (max-width: 650px) {
     .contentSubContainer{
-        height: 100vh;
-        margin: -75vh 20px 0 20px;
+        
         width: 95%;
     }
     .rightElement,.leftElement{

@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     width: 85%;
+    align-self: center;
+    margin-top: 40px;
     height: max-content;
 }
 .cardLogoContainer{

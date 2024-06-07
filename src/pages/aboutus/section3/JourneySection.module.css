@@ -1,5 +1,7 @@
 .journeySection{
-    margin-top: 10px;
+    margin-top: 60px;
+    align-self: center;
+    display: flex;
 }
 .cardLogoContainer{
     background: rgba(255, 255, 255,0.5);
@@ -24,8 +26,7 @@
     position: relative;
     text-align: center;
     color: white;
-    margin-top: -100px;
-    width: 95%;
+    width: 85%;
     align-self: center;
   }
 
@@ -43,9 +44,10 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     margin-top: -100px;
-    width: 95%;
+    width: 85%;
     justify-content: space-evenly;
     flex-direction: row;
+    margin-bottom: 100px;
   }
   .featureCard{
     padding: 15px;

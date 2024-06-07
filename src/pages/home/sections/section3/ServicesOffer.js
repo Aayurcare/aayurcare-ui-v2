@@ -23,15 +23,13 @@ const ServicesOffer = () => {
   const isMobile = useIsMobile();
 
   return (
-    <SectionContainerLeft styles={{ minHeight: "100vh" }}>
-      <div className={styles.contentSubContainer}>
-        <img src={Banner} className={styles.topBannerImage} />
-        <p className={"title-home " + styles.serviceTitle}>
-          We offer a range of <span className="text-blue">services</span>
-        </p>
-        {isMobile ? <SplideCardSection /> : <FullCardSection />}
-      </div>
-    </SectionContainerLeft>
+    <div className={styles.contentSubContainer}>
+      <img src={Banner} className={styles.topBannerImage} />
+      <p className={"title-home " + styles.serviceTitle}>
+        We offer a range of <span className="text-blue">services</span>
+      </p>
+      {isMobile ? <SplideCardSection /> : <FullCardSection />}
+    </div>
   );
 };
 

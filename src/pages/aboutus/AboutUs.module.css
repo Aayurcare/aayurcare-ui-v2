@@ -3,6 +3,7 @@
     margin-top: 20vh;
     height: auto;
     text-align: center;
+    align-self: center;
 }
 .section2{
     display: flex;

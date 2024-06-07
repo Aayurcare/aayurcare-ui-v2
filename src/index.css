@@ -59,6 +59,7 @@ input[type=number] {
 .title-home{
   text-align: left;
   align-self: flex-start;
+  
   font-size: 37px;
 }
 
