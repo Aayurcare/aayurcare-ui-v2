@@ -155,6 +155,7 @@ const HomeHeader = ({ highlighted }) => {
       <section className={styles.middleSection}>
         <Link
           to="/"
+          className={styles.sectionItem}
           style={{
             color: highlighted === 0 ? "#114DD2" : "black",
             textDecoration: "none",
@@ -164,6 +165,7 @@ const HomeHeader = ({ highlighted }) => {
         </Link>
         <Link
           to="/plans"
+          className={styles.sectionItem}
           style={{
             color: highlighted === 1 ? "#114DD2" : "black",
             textDecoration: "none",
@@ -173,6 +175,7 @@ const HomeHeader = ({ highlighted }) => {
         </Link>
         <Link
           to="/services"
+          className={styles.sectionItem}
           style={{
             color: highlighted === 2 ? "#114DD2" : "black",
             textDecoration: "none",
@@ -182,6 +185,7 @@ const HomeHeader = ({ highlighted }) => {
         </Link>
         <Link
           to="/about-us"
+          className={styles.sectionItem}
           style={{
             color: highlighted === 3 ? "#114DD2" : "black",
             textDecoration: "none",
@@ -190,8 +194,17 @@ const HomeHeader = ({ highlighted }) => {
           About Us
         </Link>
       </section>
-      {!isMobile && <p></p>}
-      {/* Include UserIcon or other content here if needed */}
+      {!isMobile && (
+        <span
+          style={{ zIndex: 10 }}
+          onClick={() => {
+            navigate("/sign-in");
+          }}
+          className={styles.userIcon}
+        >
+          <UserIcon className={styles.userIcon} />
+        </span>
+      )}
     </header>
   );
 };

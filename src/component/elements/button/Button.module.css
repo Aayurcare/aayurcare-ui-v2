@@ -13,10 +13,12 @@
 }
 
 .buttonSecondary{
-    width: 100px;
+    width: auto;
+    padding: 0px 12px 0 12px;
     height: 40px;
     border-radius: 12px;
     background: white ;
+    z-index: 10;
     color: #114DD2;
     border-color: #114DD2;
     border-radius: 10px;
@@ -25,5 +27,8 @@
 }
 
 .button:hover{
+    cursor: pointer;
+}
+.buttonSecondary:hover{
     cursor: pointer;
 }

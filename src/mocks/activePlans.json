@@ -1,0 +1,13 @@
+{
+    "status" : 200,
+    "data" : [
+        {
+            "planId" : "12327836sad",
+            "planName" : "Individual Plan",
+            "customerName" : "Reyan",
+            "price"  : 999,
+            "issueDate" : "2024-06-07T07:09:46.813Z",
+            "expiryDate"  :"2025-06-07T07:09:46.813Z"
+        }
+    ]
+}

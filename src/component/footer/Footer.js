@@ -13,6 +13,10 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
 
+  const launchUrl = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.topSection}>
@@ -54,10 +58,36 @@ const Footer = () => {
           Follow us on our social<br></br> media accounts for the<br></br>
           latest updates:
           <span>
-            <img src={FacebookIcon} className={styles.socialMediaIcon} />
-            <img src={TwitterIcon} className={styles.socialMediaIcon} />
-            <img src={LinkedinIcon} className={styles.socialMediaIcon} />
-            <img src={InstagramIcon} className={styles.socialMediaIcon} />
+            <img
+              onClick={() => {
+                launchUrl(
+                  "https://www.facebook.com/profile.php?id=61555523161717"
+                );
+              }}
+              src={FacebookIcon}
+              className={styles.socialMediaIcon}
+            />
+            <img
+              onClick={() => {
+                launchUrl("https://twitter.com/aayur_care");
+              }}
+              src={TwitterIcon}
+              className={styles.socialMediaIcon}
+            />
+            <img
+              onClick={() => {
+                launchUrl("https://www.linkedin.com/company/aayur-care/");
+              }}
+              src={LinkedinIcon}
+              className={styles.socialMediaIcon}
+            />
+            <img
+              onClick={() => {
+                launchUrl("https://www.instagram.com/aayurcarewellness/");
+              }}
+              src={InstagramIcon}
+              className={styles.socialMediaIcon}
+            />
           </span>
         </section>
       </div>

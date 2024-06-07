@@ -15,6 +15,10 @@ import Modal from "react-modal";
 import ReactModal from "react-modal";
 
 import PDFPage from "./component/pdfviewer/PDFViewer";
+import SignIn from "./pages/profile/auth/SignIn";
+import GeneralInformation from "./pages/profile/generalinformation/GeneralInformation";
+import ClaimDetails from "./pages/profile/claimdetails/ClaimDetails";
+import MyPlanDetails from "./pages/profile/plandetails/MyPlanDetails";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +48,22 @@ const router = createBrowserRouter([
   {
     path: "/help",
     element: <Help />,
+  },
+  {
+    path: "/sign-in",
+    element: <SignIn />,
+  },
+  {
+    path: "/profile/general-information",
+    element: <GeneralInformation />,
+  },
+  {
+    path: "/profile/plan-details",
+    element: <MyPlanDetails />,
+  },
+  {
+    path: "/profile/claim-details",
+    element: <ClaimDetails />,
   },
   {
     path: "/about-us/privacy-policy",
