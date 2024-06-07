@@ -4,7 +4,7 @@ if (process.env.DEV) {
     console.log("Dev mode, setting base api url to localhost");
   }
 }
-BASE_URL = "http://localhost:8081";
+// BASE_URL = "http://localhost:8081";
 
 const ENQUIRY = `${BASE_URL}/v1/plans/enquiry`;
 
