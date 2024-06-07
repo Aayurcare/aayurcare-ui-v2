@@ -1,6 +1,6 @@
 .planDetailsContainer{
     margin-bottom: 100px;
-    height: 67vh;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;

@@ -43,40 +43,38 @@ const PlanDetails = () => {
   }
 
   return (
-    <SectionContainerRight>
-      <div className={styles.planDetailsContainer}>
-        <span style={{ alignSelf: "center" }}>
-          {plans.map((item, index) => (
-            <Chip
-              index={index}
-              plan={item}
-              changeSelection={changeSelection}
-              isSelected={selected === index}
-              key={index}
-            />
-          ))}
-        </span>
-        <section className={styles.plansContainer}>
-          {plans[selected]?.plans.map((item, index) => (
-            <Plan plan={item} key={index} />
-          ))}
-        </section>
-        <p
-          style={{
-            textAlign: "center",
-            width: "80%",
-            alignSelf: "center",
-            color: "#444",
-            fontSize: "14px",
-          }}
-        >
-          * Disclaimer-Aayur Care provides medical reimbursement plans at
-          concessional or subsidized rates. Depending on customer requirements,
-          these plans may or may not be classified as insurance products or
-          offerings.
-        </p>
-      </div>
-    </SectionContainerRight>
+    <div className={styles.planDetailsContainer}>
+      <span style={{ alignSelf: "center" }}>
+        {plans.map((item, index) => (
+          <Chip
+            index={index}
+            plan={item}
+            changeSelection={changeSelection}
+            isSelected={selected === index}
+            key={index}
+          />
+        ))}
+      </span>
+      <section className={styles.plansContainer}>
+        {plans[selected]?.plans.map((item, index) => (
+          <Plan plan={item} key={index} />
+        ))}
+      </section>
+      <p
+        style={{
+          textAlign: "center",
+          width: "80%",
+          alignSelf: "center",
+          color: "#444",
+          fontSize: "14px",
+        }}
+      >
+        * Disclaimer-Aayur Care provides medical reimbursement plans at
+        concessional or subsidized rates. Depending on customer requirements,
+        these plans may or may not be classified as insurance products or
+        offerings.
+      </p>
+    </div>
   );
 };
 
