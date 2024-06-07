@@ -55,19 +55,29 @@
 .buttonCallBack{
     margin-bottom: 20px;
 }
+.chipsContainer{
+    align-self: center;
+}
 
 @media only screen and (max-width: 650px) {
     .planDetailsContainer{
-        margin-top:50px;
+        margin-top:100px;
+        display: flex;
+        justify-content: center;
     }
     .titleChip{
-        width: auto;
         margin: 0;
     }
     .plansContainer{
         flex-direction: column;
         margin-top: 0px;
         overflow: inherit;
+    }
+    .chipsContainer{
+        align-self: center;
+        align-items: center;
+        flex-direction: row;
+        text-align: center;
     }
     .planCard{
         margin-top: 20px;

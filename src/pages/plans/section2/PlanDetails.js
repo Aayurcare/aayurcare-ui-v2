@@ -44,7 +44,7 @@ const PlanDetails = () => {
 
   return (
     <div className={styles.planDetailsContainer}>
-      <span style={{ alignSelf: "center" }}>
+      <span className={styles.chipsContainer}>
         {plans.map((item, index) => (
           <Chip
             index={index}
@@ -79,6 +79,9 @@ const PlanDetails = () => {
 };
 
 const Chip = ({ index, plan, changeSelection, isSelected }) => {
+  if (!plan.title) {
+    return;
+  }
   return (
     <span
       className={styles.titleChip}
