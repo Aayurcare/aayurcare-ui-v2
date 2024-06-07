@@ -26,7 +26,6 @@
 }
 @media only screen and (max-width: 650px) {
     .contentContainer{
-        margin-top: 50vh;
         padding: 0 20px 0 20px;
         height: max-content;
     }

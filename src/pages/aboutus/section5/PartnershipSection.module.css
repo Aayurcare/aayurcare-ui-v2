@@ -29,9 +29,6 @@ li:before{
     font-weight: 600;
 }
 @media only screen and (max-width: 650px) {
-    .container{
-        margin-top: 170vh;
-    }
     .contentSection{
         flex-direction: column-reverse;
     }
