@@ -1,6 +1,7 @@
 .planDetailsContainer{
     margin-bottom: 100px;
     height: auto;
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -57,11 +58,7 @@
 
 @media only screen and (max-width: 650px) {
     .planDetailsContainer{
-        margin-top: 10px;
-    }
-    .planDetailsContainer{
-        height: 120vh;
-        margin-bottom: 200px;
+        margin-top:50px;
     }
     .titleChip{
         width: auto;

@@ -1,13 +1,12 @@
 .introWelcomeContainer{
-    height: 80vh;
+    height: 70vh;
     text-align: center;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    padding: 0 10% 0 10%;
-    background: rgb(255,255,255);
+    padding: 0 10% 0 10%; 
     background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(255,255,255,0.9010197829131653) 51%, rgba(255,255,255,0.6937368697478992) 64%, rgba(255,255,255,0) 100%);
 }
 .introSubTitle{

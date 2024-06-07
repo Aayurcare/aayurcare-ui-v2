@@ -11,7 +11,6 @@ const Plans = () => {
     <HomeToolbarLayout highlighted={1}>
       <IntroWelcomeSection />
       <PlanDetails />
-      {isMobile && <SectionContainerLeft styles={{ minHeight: "20vh" }} />}
       <Footer />
     </HomeToolbarLayout>
   );
