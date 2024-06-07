@@ -23,6 +23,7 @@
 
 .formCard{
     width: 40%;
+    max-width: 400px;
     display: flex;
     text-align: center;
     flex-direction: column;
