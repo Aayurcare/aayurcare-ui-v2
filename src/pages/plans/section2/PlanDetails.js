@@ -1,16 +1,10 @@
-import {
-  SectionContainerLeft,
-  SectionContainerRight,
-} from "../../home/sections/SectionContainer";
 import styles from "./PlanDetails.module.css";
-
-import mockJson from "../../../mocks/heathPlans.json";
 import { useEffect, useState } from "react";
 import ButtonPrimary from "../../../component/elements/button/ButtonPrimary";
 import useIsMobile from "../../../hooks/useIsMobile";
 import PlanEnquiryModal from "../dialogs/PlanEnquiryModal";
 import { PLANS_URL } from "../../../api/urls";
-
+import ReactLoading from "react-loading";
 const PlanDetails = () => {
   const [plans, setPlans] = useState(null);
   const [selected, setSelected] = useState(0);
@@ -39,7 +33,21 @@ const PlanDetails = () => {
   };
 
   if (!plans) {
-    return <p>Loading...</p>;
+    return (
+      <span
+        style={{
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <ReactLoading
+          type="bubbles"
+          color="#114DD2"
+          className={styles.spinner}
+        />
+      </span>
+    );
   }
 
   return (

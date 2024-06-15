@@ -13,12 +13,15 @@ import Help from "./pages/help/Help";
 import Plans from "./pages/plans/Plans";
 import Modal from "react-modal";
 import ReactModal from "react-modal";
-
+import AuthProvider from "react-auth-kit/AuthProvider";
 import PDFPage from "./component/pdfviewer/PDFViewer";
+import store from "./stores/authStore";
 import SignIn from "./pages/profile/auth/SignIn";
 import GeneralInformation from "./pages/profile/generalinformation/GeneralInformation";
 import ClaimDetails from "./pages/profile/claimdetails/ClaimDetails";
 import MyPlanDetails from "./pages/profile/plandetails/MyPlanDetails";
+import PrivateRoute from "./PrivateRoute";
+import PlanDetails from "./pages/plans/section2/PlanDetails";
 
 const router = createBrowserRouter([
   {
@@ -51,19 +54,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign-in",
-    element: <SignIn />,
+    element: <PrivateRoute element={<SignIn />} />,
   },
   {
     path: "/profile/general-information",
-    element: <GeneralInformation />,
+    element: <PrivateRoute element={<GeneralInformation />} />,
   },
   {
     path: "/profile/plan-details",
-    element: <MyPlanDetails />,
+    element: <PrivateRoute element={<MyPlanDetails />} />,
   },
   {
     path: "/profile/claim-details",
-    element: <ClaimDetails />,
+    element: <PrivateRoute element={<ClaimDetails />} />,
   },
   {
     path: "/about-us/privacy-policy",
@@ -117,7 +120,9 @@ root.render(
         rel="stylesheet"
       />
     </Helmet>
-    <RouterProvider router={router} />
+    <AuthProvider store={store}>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
 

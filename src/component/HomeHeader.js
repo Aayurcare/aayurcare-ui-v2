@@ -2,13 +2,13 @@ import styles from "./HomeHeader.module.css";
 import UserIcon from "../assets/icons/svgjs/UserIcon";
 import Logo from "../assets/icons/logo_light_bg.svg";
 import { Link } from "react-router-dom";
-import { slide as Menu } from "react-burger-menu";
 import { useNavigate } from "react-router-dom";
 
 import LogoSM from "../assets/icons/logo_sm.svg";
 import HamburgerIcon from "../assets/icons/hamburger.svg";
 import useIsMobile from "../hooks/useIsMobile";
 import { useState } from "react";
+import useIsAuthenticated from "react-auth-kit/hooks/useIsAuthenticated";
 
 import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -19,6 +19,8 @@ const HomeHeader = ({ highlighted }) => {
   const isMobile = useIsMobile(); // Use the custom hook to determine mobile status
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  const isAuthenticated = useIsAuthenticated();
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -197,9 +199,7 @@ const HomeHeader = ({ highlighted }) => {
       {!isMobile && (
         <span
           style={{ zIndex: 10 }}
-          onClick={() => {
-            navigate("/sign-in");
-          }}
+          onClick={handleUserIconClick}
           className={styles.userIcon}
         >
           <UserIcon className={styles.userIcon} />
@@ -207,6 +207,15 @@ const HomeHeader = ({ highlighted }) => {
       )}
     </header>
   );
+
+  function handleUserIconClick() {
+    console.log(`is ${isAuthenticated}`);
+    if (isAuthenticated) {
+      navigate("/profile/plan-details");
+    } else {
+      navigate("/sign-in");
+    }
+  }
 };
 
 export default HomeHeader;

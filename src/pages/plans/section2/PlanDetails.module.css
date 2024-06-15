@@ -50,9 +50,10 @@
 .planDescription{
     font-weight: 300;
     font-size: 14px;
-    height: 100px;
+    flex-grow: 1;
 }
 .buttonCallBack{
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .chipsContainer{

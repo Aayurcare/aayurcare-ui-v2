@@ -140,3 +140,10 @@ p{
 }
 /* Right Section Ends*/
 
+
+
+@media only screen and (max-width: 1150px) {
+    .planFeaturesCard{
+        flex-direction: column;
+    }
+}

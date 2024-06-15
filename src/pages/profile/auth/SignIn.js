@@ -4,8 +4,12 @@ import ButtonPrimary from "../../../component/elements/button/ButtonPrimary";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { loginUser } from "../../../api/authAPI";
+import useSignIn from "react-auth-kit/hooks/useSignIn";
+import ReactLoading from "react-loading";
+
 const SignIn = () => {
   const navigate = useNavigate();
+  const signIn = useSignIn();
 
   const [formData, setFormData] = useState({
     contactNumber: "",
@@ -13,6 +17,7 @@ const SignIn = () => {
   });
 
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,14 +28,27 @@ const SignIn = () => {
 
   const login = async () => {
     setError("");
+    setIsLoading(true);
     try {
       const response = await loginUser(formData);
-      //TODO Save state
-      navigate("/profile/plan-details");
+      if (
+        signIn({
+          auth: {
+            token: response.token,
+            type: "Bearer",
+          },
+          userState: response.data,
+        })
+      ) {
+        navigate("/profile/plan-details");
+      } else {
+        //Throw error
+      }
     } catch (err) {
       console.log(err.message);
       setError(err.message);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -56,14 +74,22 @@ const SignIn = () => {
           className={styles.formInput}
         />
         <p className={styles.textSecondary}>Forgot Password ?</p>
-        <ButtonPrimary
-          className={styles.button}
-          content={"Login"}
-          onClick={login}
-        >
-          Login
-        </ButtonPrimary>
-        {error.length > 0 && error}
+        {!isLoading ? (
+          <ButtonPrimary
+            className={styles.button}
+            content={"Login"}
+            onClick={login}
+          >
+            Login
+          </ButtonPrimary>
+        ) : (
+          <ReactLoading
+            type="bubbles"
+            color="#114DD2"
+            className={styles.spinner}
+          />
+        )}
+        {error.length > 0 && <p className={styles.errorMessage}>{error}</p>}
         <br></br>
         <p>
           Don't have an account ? <p className="text-blue">Sign Up</p>

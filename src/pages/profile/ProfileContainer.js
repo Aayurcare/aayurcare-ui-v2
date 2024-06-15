@@ -66,8 +66,7 @@ const Chip = ({ pageInfo, isSelected }) => {
   const navigate = useNavigate();
   const currentLocation =
     window.location.href.split("/")[window.location.href.split("/").length - 1];
-  console.log(currentLocation);
-  console.log(pageInfo.route.split("/")[2]);
+
   return (
     <span
       className={styles.titleChip}

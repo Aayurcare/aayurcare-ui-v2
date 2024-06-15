@@ -40,7 +40,7 @@ const LandingHomeSection = () => {
           content={"Learn More"}
           className={styles.buttonLearnMore}
           onClick={() => {
-            navigate("/plans");
+            navigate("/services");
           }}
         />
       </section>

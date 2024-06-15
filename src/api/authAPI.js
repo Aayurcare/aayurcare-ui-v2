@@ -8,10 +8,11 @@ const loginUser = async (data) => {
       body: JSON.stringify(data),
     };
     const response = await fetch(LOGIN_URL, requestOptions);
+    const json = await response.json();
     if (!response.ok) {
-      throw `Invalid username/password`;
+      throw json.error;
     }
-    return await response.json();
+    return json;
   } catch (error) {
     throw Error(error);
   }

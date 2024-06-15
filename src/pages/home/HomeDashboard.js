@@ -1,5 +1,5 @@
 import HomeToolbarLayout from "../../layouts/home/HomeToolbarLayout";
-import CustomizeHealthPlan from "./sections/section1/CustomizeHealthPlan";
+import CustomizeHealthPlan from "./sections/1customizehealthplans/CustomizeHealthPlan";
 import LandingHomeSection from "./sections/landing/LandingHomeSection";
 import ServicesOffer from "./sections/section3/ServicesOffer";
 import WhyAayurCare from "./sections/section2/WhyAayurCare";
