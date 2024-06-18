@@ -5,13 +5,40 @@ import ButtonSecondary from "../../../component/elements/button/ButtonSecondary"
 
 import mockData from "../../../mocks/activePlans.json";
 import { Bounce, toast, ToastContainer } from "react-toastify";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchCustomerPlans } from "../../../api/myPlans";
+import Loading from "react-loading";
 
 const MyPlanDetails = () => {
-  console.log(mockData.data);
+  const [isLoading, setIsLoading] = useState(false);
+  const [plans, setPlans] = useState([]);
+
+  const fetchPlans = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetchCustomerPlans();
+      setPlans(response.data);
+    } catch (error) {
+      alert(error);
+    }
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    fetchPlans();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <ProfileContainer>
+        <Loading type="bubbles" color="#114DD2" />
+      </ProfileContainer>
+    );
+  }
+
   return (
     <ProfileContainer>
-      <PlanItems purchasedPlans={mockData.data}></PlanItems>
+      <PlanItems purchasedPlans={plans}></PlanItems>
       <ToastContainer />
     </ProfileContainer>
   );
@@ -29,6 +56,13 @@ const PlanItems = ({ purchasedPlans }) => {
 
 const PlanItem = ({ purchasedPlan }) => {
   const [isClaimSubmitted, setIsClaimSubmitted] = useState(false);
+
+  const purchasedFor =
+    purchasedPlan.purchasedFor.length > 1
+      ? `${purchasedPlan.purchasedFor[0].name} and ${
+          purchasedPlan.purchasedFor.length - 1
+        } others`
+      : purchasedPlan.purchasedFor[0].name;
 
   const submitClaim = () => {
     setIsClaimSubmitted(true);
@@ -50,8 +84,8 @@ const PlanItem = ({ purchasedPlan }) => {
       <span className={styles.planLeftArea}>
         <p className={styles.purchasedPlanName}>{purchasedPlan.planName}</p>
         <p className={styles.customerName}>
-          Purchased for {purchasedPlan.customerName} on{" "}
-          {new Date(purchasedPlan.issueDate).toISOString().split("T")[0]}
+          Purchased for {purchasedFor} on{" "}
+          {new Date(purchasedPlan.createdAt).toLocaleString().split(",")[0]}
         </p>
         <p className={styles.date}>
           {" "}

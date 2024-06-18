@@ -14,4 +14,15 @@ const LOGIN_URL = `${BASE_URL}/v1/auth/user/login`;
 
 const SIGNUP_URL = `${BASE_URL}/v1/auth/user/login`;
 
-export { ENQUIRY, PLANS_URL, LOGIN_URL, SIGNUP_URL };
+const MY_PLANS = `${BASE_URL}/v1/account/subscriptions`;
+
+const SESSION_REFRESH_URL = `${BASE_URL}/v1/auth/user/session`;
+
+export {
+  ENQUIRY,
+  PLANS_URL,
+  LOGIN_URL,
+  SIGNUP_URL,
+  MY_PLANS,
+  SESSION_REFRESH_URL,
+};
