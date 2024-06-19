@@ -1,21 +1,23 @@
-import { ENQUIRY, LOGIN_URL, SESSION_REFRESH_URL } from "./urls";
+import { doPost } from "./baseRequest";
+import {
+  ENQUIRY,
+  LOGIN_URL,
+  REQUEST_OTP_URL,
+  SESSION_REFRESH_URL,
+  VERIFY_OTP_URL,
+} from "./urls";
 import Cookies from "js-cookie";
+
 const loginUser = async (data) => {
-  try {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-    const response = await fetch(LOGIN_URL, requestOptions);
-    const json = await response.json();
-    if (!response.ok) {
-      throw json.error;
-    }
-    return json;
-  } catch (error) {
-    throw Error(error);
-  }
+  return await doPost(LOGIN_URL, data);
+};
+
+const requestOTP = async (data) => {
+  return await doPost(REQUEST_OTP_URL, data);
+};
+
+const verifyOTP = async (data) => {
+  return await doPost(VERIFY_OTP_URL, data);
 };
 
 const fetchSessionData = async () => {
@@ -38,4 +40,4 @@ const fetchSessionData = async () => {
   }
 };
 
-export { loginUser, fetchSessionData };
+export { loginUser, fetchSessionData, requestOTP, verifyOTP };

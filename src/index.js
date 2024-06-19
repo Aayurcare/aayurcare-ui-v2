@@ -22,6 +22,7 @@ import ClaimDetails from "./pages/profile/claimdetails/ClaimDetails";
 import MyPlanDetails from "./pages/profile/plandetails/MyPlanDetails";
 import PrivateRoute from "./PrivateRoute";
 import PlanDetails from "./pages/plans/section2/PlanDetails";
+import SignUp from "./pages/profile/auth/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "/sign-in",
     element: <SignIn />,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp />,
   },
   {
     path: "/profile/general-information",
@@ -105,7 +110,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 ReactModal.setAppElement("#root");
 
 root.render(
-  <React.StrictMode>
+  <div>
     <Helmet>
       <title>Aayurcare</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -123,7 +128,7 @@ root.render(
     <AuthProvider store={store}>
       <RouterProvider router={router} />
     </AuthProvider>
-  </React.StrictMode>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

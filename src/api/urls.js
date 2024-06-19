@@ -4,15 +4,21 @@ if (process.env.DEV) {
     console.log("Dev mode, setting base api url to localhost");
   }
 }
-// BASE_URL = "http://localhost:8081";
+BASE_URL = "http://localhost:8081";
 
 const ENQUIRY = `${BASE_URL}/v1/plans/enquiry`;
 
 const PLANS_URL = `${BASE_URL}/v1/plans`;
 
+//AUTH URLs
+
 const LOGIN_URL = `${BASE_URL}/v1/auth/user/login`;
 
 const SIGNUP_URL = `${BASE_URL}/v1/auth/user/login`;
+
+const REQUEST_OTP_URL = `${BASE_URL}/v1/auth/user/register/otp/request`;
+
+const VERIFY_OTP_URL = `${BASE_URL}/v1/auth/user/register/otp/verify`;
 
 const MY_PLANS = `${BASE_URL}/v1/account/subscriptions`;
 
@@ -25,4 +31,6 @@ export {
   SIGNUP_URL,
   MY_PLANS,
   SESSION_REFRESH_URL,
+  REQUEST_OTP_URL,
+  VERIFY_OTP_URL,
 };

@@ -92,7 +92,15 @@ const SignIn = () => {
         {error.length > 0 && <p className={styles.errorMessage}>{error}</p>}
         <br></br>
         <p>
-          Don't have an account ? <p className="text-blue">Sign Up</p>
+          Don't have an account ?{" "}
+          <p
+            className="text-blue clickable"
+            onClick={() => {
+              navigate("/sign-up");
+            }}
+          >
+            Sign Up
+          </p>
         </p>
       </div>
     </div>

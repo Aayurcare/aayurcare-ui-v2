@@ -63,6 +63,10 @@ input[type=number] {
   font-size: 37px;
 }
 
+.clickable:hover{
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 650px) {
   .title-home{
     font-size: 30px;

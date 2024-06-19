@@ -21,6 +21,10 @@
     margin-bottom: 20px;
 }
 
+.textPrimary{
+    font-size: large;
+}
+
 .formCard{
     width: 40%;
     max-width: 400px;
@@ -36,6 +40,7 @@
 
 .formInput {
     width: 80%;
+    font-size: large;
     align-self: center;
     border: 1px solid #ccc;
     background-color: aliceblue;
@@ -54,7 +59,17 @@
 
 .errorMessage{
     margin : 10px 0 0 0;
-    color: rgb(251, 89, 89);
+    font-size: 15px;
+    color: rgb(205, 47, 47);
+}
+.otpInputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.otpInput{
+    font-size: x-large;
+
 }
 @media only screen and (max-width: 650px) {
     .formCard{
