@@ -80,3 +80,20 @@
     white-space: initial;
 
 }
+
+.logoutButton{
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90px;
+}
+
+.logoutButton:hover{
+    cursor: pointer;
+    transition: border 2s;
+    transition-duration: 1s;
+    height: 45px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

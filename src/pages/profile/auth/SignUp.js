@@ -7,25 +7,24 @@ import useSignIn from "react-auth-kit/hooks/useSignIn";
 import ReactLoading from "react-loading";
 import OTPInput from "react-otp-input";
 import { requestOTP, verifyOTP } from "../../../api/authAPI";
+import DetailsInputForm from "./frames/DetailsInputForm";
 
 const CONTACT_INPUT = "contact_number_form";
 const OTP_INPUT = "otp_verify_form";
-const DETAILS_INTPUT = "details_input";
+const DETAILS_INTPUT = "details_form";
 
 const SignUp = () => {
   const [currentStep, setCurrentStep] = useState(CONTACT_INPUT);
 
   const navigate = useNavigate();
   const signIn = useSignIn();
-  const [requestId, setRequestId] = useState();
+  const [otpRequestId, setOtpRequestId] = useState();
+  const [contactNumber, setContactNumber] = useState();
 
   const [error, setError] = useState("");
 
-  const frameNavigate = (targetScreen, requestId) => {
+  const frameNavigate = (targetScreen) => {
     setCurrentStep(targetScreen);
-    if (requestId) {
-      setRequestId(requestId);
-    }
   };
 
   return (
@@ -39,6 +38,8 @@ const SignUp = () => {
           <ContactNumberForm
             setError={setError}
             frameNavigate={frameNavigate}
+            setContactNumber={setContactNumber}
+            setOtpRequestId={setOtpRequestId}
           />
         )}
 
@@ -46,21 +47,30 @@ const SignUp = () => {
           <OTPInputForm
             setError={setError}
             frameNavigate={frameNavigate}
-            requestId={requestId}
+            requestId={otpRequestId}
           />
         )}
 
         {currentStep === DETAILS_INTPUT && (
-          <OTPInputForm setError={setError} frameNavigate={frameNavigate} />
+          <DetailsInputForm
+            setError={setError}
+            frameNavigate={frameNavigate}
+            _otpRequestId={otpRequestId}
+            _contactNumber={contactNumber}
+          />
         )}
         {error.length > 0 && <p className={styles.errorMessage}>{error}</p>}
       </div>
-      {error}
     </div>
   );
 };
 
-const ContactNumberForm = ({ setError, error, frameNavigate }) => {
+const ContactNumberForm = ({
+  setError,
+  frameNavigate,
+  setOtpRequestId,
+  setContactNumber,
+}) => {
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef(null);
   const [formData, setFormData] = useState({
@@ -79,18 +89,17 @@ const ContactNumberForm = ({ setError, error, frameNavigate }) => {
     if (formData.contactNumber.length != 10) {
       setError("Invalid contact number");
     }
-
+    setIsLoading(true);
     try {
-      setIsLoading(true);
       const response = await requestOTP(formData);
-      console.log(response);
-      setIsLoading(false);
-      console.log(response.data.generatedOTP);
-      frameNavigate(OTP_INPUT, response.data._id);
+      console.log(response.data._id);
+      setContactNumber(response.data.contactNumber);
+      setOtpRequestId(response.data._id);
+      frameNavigate(OTP_INPUT);
     } catch (error) {
-      setIsLoading(false);
       setError(error.message);
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -148,13 +157,12 @@ const OTPInputForm = ({ setError, error, frameNavigate, requestId }) => {
   const [otp, setOtp] = useState("");
 
   if (!requestId) {
+    console.log("invalid request");
     frameNavigate(CONTACT_INPUT);
   }
 
   const [resendTimeOut, setResendTimeOut] = useState(31);
-
   const timerRef = useRef(null);
-  console.log(`requestinf with ${requestId}`);
   const submitOTPRequest = async () => {
     setError("");
     try {
@@ -163,20 +171,17 @@ const OTPInputForm = ({ setError, error, frameNavigate, requestId }) => {
         requestId,
         otp,
       });
-      console.log(response);
       setIsLoading(false);
-      // frameNavigate(DETAILS_INPUT);
+      frameNavigate(DETAILS_INTPUT);
     } catch (error) {
       setIsLoading(false);
       setError(error.message);
-      console.log(`error ${error}`);
     }
   };
 
   // Cleanup effect to clear the interval on component unmount
   useEffect(() => {
     return () => {
-      console.log("unmount");
       clearInterval(timerRef.current);
     };
   }, []);

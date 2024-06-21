@@ -45,6 +45,10 @@ const MyPlanDetails = () => {
 };
 
 const PlanItems = ({ purchasedPlans }) => {
+  if (purchasedPlans.length == 0) {
+    return <p>You don't have any active plans</p>;
+  }
+
   return (
     <section style={{ width: "100%", display: "flex" }}>
       {purchasedPlans.map((item) => (

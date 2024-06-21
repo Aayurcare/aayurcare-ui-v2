@@ -4,12 +4,17 @@ import {
   LOGIN_URL,
   REQUEST_OTP_URL,
   SESSION_REFRESH_URL,
+  SIGNUP_URL,
   VERIFY_OTP_URL,
 } from "./urls";
 import Cookies from "js-cookie";
 
 const loginUser = async (data) => {
   return await doPost(LOGIN_URL, data);
+};
+
+const signUpUser = async (data) => {
+  return await doPost(SIGNUP_URL, data);
 };
 
 const requestOTP = async (data) => {
@@ -40,4 +45,4 @@ const fetchSessionData = async () => {
   }
 };
 
-export { loginUser, fetchSessionData, requestOTP, verifyOTP };
+export { loginUser, fetchSessionData, requestOTP, verifyOTP, signUpUser };

@@ -9,6 +9,11 @@
     background-image: url("../../../assets/images/auth/auth-background.png");
 }
 
+.detailsInputContainer{
+    display: flex;
+    flex-direction: column;
+}
+
 .logo{
     width: 15em;
     position: absolute;
@@ -42,16 +47,31 @@
     width: 80%;
     font-size: large;
     align-self: center;
-    border: 1px solid #ccc;
-    background-color: aliceblue;
+    /* border: 1px solid #ccc; */
+    background-color: rgb(248, 248, 248);
+}
+.nameInputs{
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    align-self: center;
+    justify-content: space-between;
 }
 
+.firstNameInput{
+    margin-right: 10px;
+   
+}
+.lastNameInput{
+    margin-left: 10px;
+}
 .button{
     margin-top: 20px;
     width: 80%;
     height: 50px;
     border: none;
 }
+
 
 .spinner{
     align-self: center;
@@ -70,6 +90,21 @@
 .otpInput{
     font-size: x-large;
 
+}
+
+.datePickerContainer{
+    width: 88%;
+    align-self: center;
+    display: flex;
+    font-size: medium;
+    justify-content: space-between;
+}
+
+.datePicker{
+    background-color: rgb(248, 248, 248);
+    font-size: large;
+    margin-top: 20px;
+    
 }
 @media only screen and (max-width: 650px) {
     .formCard{
