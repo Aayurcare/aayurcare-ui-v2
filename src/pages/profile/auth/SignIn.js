@@ -1,23 +1,43 @@
 import styles from "./Signin.module.css";
 import Logo from "../../../assets/icons/logo_light_bg.svg";
 import ButtonPrimary from "../../../component/elements/button/ButtonPrimary";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { loginUser } from "../../../api/authAPI";
 import useSignIn from "react-auth-kit/hooks/useSignIn";
 import ReactLoading from "react-loading";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const SignIn = () => {
   const navigate = useNavigate();
   const signIn = useSignIn();
-
+  const searchParams = new URLSearchParams(window.location.search);
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     contactNumber: "",
     password: "",
   });
 
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    if (
+      searchParams.get("type") === "signup" &&
+      searchParams.get("status") === "success"
+    ) {
+      console.log("toasting");
+      toast.success("Your account has been created.", {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -103,6 +123,7 @@ const SignIn = () => {
           </p>
         </p>
       </div>
+      <ToastContainer />
     </div>
   );
 };

@@ -1,13 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { createSearchParams, useNavigate } from "react-router-dom";
 import ReactLoading from "react-loading";
 import DatePicker from "react-datepicker";
-
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
 import "react-datepicker/dist/react-datepicker.css";
-
+import { Calendar } from "react-date-range";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 import styles from "../Signin.module.css";
 import ButtonPrimary from "../../../../component/elements/button/ButtonPrimary";
 import { signUpUser } from "../../../../api/authAPI";
+// import Calendar from "react-datepicker/dist/calendar";
 
 const DetailsInputForm = ({
   setError,
@@ -17,6 +20,7 @@ const DetailsInputForm = ({
 }) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [formData, setFormData] = useState({
     contactNumber: _contactNumber,
     otpRequestId: _otpRequestId,
@@ -51,8 +55,14 @@ const DetailsInputForm = ({
     setIsLoading(true);
     try {
       const response = await signUpUser(formData);
-      console.log(response.data);
-      navigate("/sign-in");
+
+      navigate({
+        pathname: "/sign-in",
+        search: createSearchParams({
+          type: "signup",
+          status: "success",
+        }).toString(),
+      });
     } catch (error) {
       setError(error.message);
     }
@@ -113,10 +123,17 @@ const DetailsInputForm = ({
           onChange={handleChange}
         />
       </span>
-
+      {/* <Calendar
+        date={new Date()}
+        onChange={(date) => {
+          console.log(date);
+        }}
+      /> */}
       <label className={styles.datePickerContainer}>
-        <p style={{ alignSelf: "center" }}>Date of Birth</p>
-        <DatePicker
+        <p style={{ alignSelf: "center", textAlign: "center", width: "35%" }}>
+          Date of Birth
+        </p>
+        {/* <DatePicker
           name="dob"
           onChange={(date) => {
             setFormData({
@@ -127,8 +144,15 @@ const DetailsInputForm = ({
           }}
           className={styles.datePicker}
           selected={formData.dob}
+        /> */}
+        <input
+          type="date"
+          className={styles.datePicker}
+          onChange={handleChange}
+          name="dob"
         />
       </label>
+
       {!isLoading ? (
         <ButtonPrimary
           className={styles.button}

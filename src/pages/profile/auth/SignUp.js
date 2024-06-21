@@ -8,6 +8,7 @@ import ReactLoading from "react-loading";
 import OTPInput from "react-otp-input";
 import { requestOTP, verifyOTP } from "../../../api/authAPI";
 import DetailsInputForm from "./frames/DetailsInputForm";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const CONTACT_INPUT = "contact_number_form";
 const OTP_INPUT = "otp_verify_form";
@@ -61,6 +62,7 @@ const SignUp = () => {
         )}
         {error.length > 0 && <p className={styles.errorMessage}>{error}</p>}
       </div>
+      <ToastContainer />
     </div>
   );
 };
@@ -73,9 +75,16 @@ const ContactNumberForm = ({
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef(null);
+  const [tncCheck, setTncCheck] = useState(false);
   const [formData, setFormData] = useState({
     contactNumber: "",
   });
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      submitOTPRequest();
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -88,7 +97,14 @@ const ContactNumberForm = ({
     setError("");
     if (formData.contactNumber.length != 10) {
       setError("Invalid contact number");
+      return;
     }
+
+    if (!tncCheck) {
+      setError("Terms and conditions not accepted");
+      return;
+    }
+
     setIsLoading(true);
     try {
       const response = await requestOTP(formData);
@@ -109,7 +125,9 @@ const ContactNumberForm = ({
   }, []);
 
   return (
-    <div>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <p className={styles.textPrimary}>Let's get started</p>
       <input
         name="contactNumber"
@@ -119,6 +137,7 @@ const ContactNumberForm = ({
         onChange={handleChange}
         className={styles.formInput}
         style={{ marginTop: 20, marginBottom: 0 }}
+        onKeyDown={handleKeyPress}
         ref={inputRef}
       />
       <br></br>
@@ -130,8 +149,12 @@ const ContactNumberForm = ({
           alignItems: "center",
         }}
       >
-        <input style={{ marginBottom: "0" }} type="checkbox" />I agree to the
-        terms and conditions
+        <input
+          style={{ marginBottom: "0" }}
+          type="checkbox"
+          onChange={(e) => setTncCheck(e.target.checked)}
+        />
+        I agree to the terms and conditions
       </label>
       {!isLoading ? (
         <ButtonPrimary
