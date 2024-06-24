@@ -2,6 +2,10 @@ import { SectionContainerLeft } from "../../home/sections/SectionContainer";
 import styles from "./PartnershipSection.module.css";
 import aboutUsStyles from "../AboutUs.module.css";
 
+import GreenClient from "../../../assets/images/aboutus/clients/green.jpeg";
+import YogaFitnessClient from "../../../assets/images/aboutus/clients/yogafitness.png";
+import AboradWaleClient from "../../../assets/images/aboutus/clients/aboradwale.jpeg";
+import ZymatecClient from "../../../assets/images/aboutus/clients/zymantec.jpeg";
 import PartnershipImg from "../../../assets/images/aboutus/partnership.png";
 const PartnershipSection = () => {
   return (
@@ -10,7 +14,7 @@ const PartnershipSection = () => {
         Benefits for <span className="text-blue">Partnership</span>
       </p>
       <section className={styles.contentSection}>
-        <ol>
+        <ol className={styles.benefitsText}>
           <li>
             <span>
               <p className={styles.listTitle}>Zero Setup Cost</p>
@@ -76,6 +80,31 @@ const PartnershipSection = () => {
           alt="Partners Image"
         />
       </section>
+      <p className={aboutUsStyles.subTitle}>
+        Our <span className="text-blue">Clients</span>
+      </p>
+      <div className={styles.clientsContainer}>
+        <img
+          className={styles.clientIconImage}
+          src={GreenClient}
+          alt="green-builders"
+        />
+        <img
+          className={styles.clientIconImage}
+          src={AboradWaleClient}
+          alt="abroad-wale"
+        />
+        <img
+          className={styles.clientIconImage}
+          src={YogaFitnessClient}
+          alt="yoga-wale"
+        />
+        <img
+          className={styles.clientIconImage}
+          src={ZymatecClient}
+          alt="zymatec"
+        />
+      </div>
     </div>
   );
 };
