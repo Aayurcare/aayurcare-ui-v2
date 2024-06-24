@@ -2,10 +2,10 @@ import { SectionContainerLeft } from "../../home/sections/SectionContainer";
 import styles from "./PartnershipSection.module.css";
 import aboutUsStyles from "../AboutUs.module.css";
 
-import GreenClient from "../../../assets/images/aboutus/clients/green.jpeg";
+import GreenClient from "../../../assets/images/aboutus/clients/green.png";
 import YogaFitnessClient from "../../../assets/images/aboutus/clients/yogafitness.png";
-import AboradWaleClient from "../../../assets/images/aboutus/clients/aboradwale.jpeg";
-import ZymatecClient from "../../../assets/images/aboutus/clients/zymantec.jpeg";
+import AboradWaleClient from "../../../assets/images/aboutus/clients/aboradwale.png";
+import ZymatecClient from "../../../assets/images/aboutus/clients/zymantec.png";
 import PartnershipImg from "../../../assets/images/aboutus/partnership.png";
 const PartnershipSection = () => {
   return (
