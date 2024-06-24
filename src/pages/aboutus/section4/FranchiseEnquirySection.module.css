@@ -112,6 +112,9 @@
     width: 70%;
     margin-top: 10px;
   }
+  .container{
+    width: 100%;
+  }
   .nameInput{
     width: 40%;
   }
