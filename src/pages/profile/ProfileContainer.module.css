@@ -63,6 +63,7 @@
     font-size: .8em;
     margin-top: 20px;
 }
+
 .profileTableRow{
     display: flex;
     margin-bottom: 10px;
@@ -96,4 +97,24 @@
     height: 45px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+.logoutButtonText{
+    font-size: medium;
+}
+
+@media only screen and (max-width: 650px) {
+    .container{
+        flex-direction: column;
+    }
+    .pageContainer{
+        margin-top: 20px;
+    }
+    .chipContainer{
+        margin-left: 10px;
+        border-radius: 20px;
+        font-size: small;
+    }
+    .logoutButtonText{
+        display: none;
+    }
 }
