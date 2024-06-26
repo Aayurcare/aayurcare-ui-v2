@@ -4,6 +4,8 @@
     width: 90%;
     font-size: 15px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .contentSection{
@@ -40,6 +42,9 @@ li:before{
     margin-bottom: 70px;
     justify-content: center;
     flex-direction: row;
+    max-width: 50%;
+    align-self: center;
+    flex-wrap: wrap;
 }
 .clientIconImage{
     max-width: 150px;

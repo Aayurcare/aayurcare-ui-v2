@@ -6,6 +6,8 @@ import GreenClient from "../../../assets/images/aboutus/clients/green.png";
 import YogaFitnessClient from "../../../assets/images/aboutus/clients/yogafitness.png";
 import AboradWaleClient from "../../../assets/images/aboutus/clients/aboradwale.png";
 import ZymatecClient from "../../../assets/images/aboutus/clients/zymantec.png";
+import SignOwnClient from "../../../assets/images/aboutus/clients/signown.png";
+import EnovatClient from "../../../assets/images/aboutus/clients/enovat.png";
 import PartnershipImg from "../../../assets/images/aboutus/partnership.png";
 const PartnershipSection = () => {
   return (
@@ -102,6 +104,16 @@ const PartnershipSection = () => {
         <img
           className={styles.clientIconImage}
           src={ZymatecClient}
+          alt="zymatec"
+        />
+        <img
+          className={styles.clientIconImage}
+          src={EnovatClient}
+          alt="zymatec"
+        />
+        <img
+          className={styles.clientIconImage}
+          src={SignOwnClient}
           alt="zymatec"
         />
       </div>
