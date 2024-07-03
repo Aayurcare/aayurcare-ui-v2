@@ -6,7 +6,7 @@ if (process.env.DEV) {
 }
 // BASE_URL = "http://localhost:8081";
 
-const ENQUIRY = `${BASE_URL}/v1/plans/enquiry`;
+const ENQUIRY = `${BASE_URL}/v1/plans/enquiries`;
 
 const PLANS_URL = `${BASE_URL}/v1/plans`;
 

@@ -125,8 +125,17 @@ const FormContainer = ({ plan, setIsOpen }) => {
     mobile: "",
     email: "",
     age: "",
+    contactNumber: "",
     language: "pref",
-    planId: plan._id,
+    planDetails: {
+      planId: plan._id,
+      planName: plan.planName,
+      price: plan.price,
+      days: plan.days,
+      description:
+        "Our standard plan offers tailored, comprehensive support for your needs.",
+      category: plan.category,
+    },
   });
 
   const [errors, setErrors] = useState({});
@@ -142,10 +151,10 @@ const FormContainer = ({ plan, setIsOpen }) => {
     let formErrors = {};
 
     if (!formData.name) formErrors.name = "Name is required";
-    if (!formData.mobile) {
-      formErrors.mobile = "Mobile number is required";
-    } else if (!/^\d{10}$/.test(formData.mobile)) {
-      formErrors.mobile = "Mobile number must be 10 digits";
+    if (!formData.contactNumber) {
+      formErrors.contactNumber = "Mobile number is required";
+    } else if (!/^\d{10}$/.test(formData.contactNumber)) {
+      formErrors.contactNumber = "Mobile number must be 10 digits";
     }
     if (!formData.email) {
       formErrors.email = "Email is required";
@@ -183,7 +192,9 @@ const FormContainer = ({ plan, setIsOpen }) => {
           });
           setIsOpen(false);
         }
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       setErrors(formErrors);
     }
@@ -210,14 +221,16 @@ const FormContainer = ({ plan, setIsOpen }) => {
         {errors.name && <p className={styles.error}>{errors.name}</p>}
 
         <input
-          name="mobile"
-          value={formData.mobile}
+          name="contactNumber"
+          value={formData.contactNumber}
           onChange={handleChange}
           className={styles.formInput}
-          placeholder="Mobile Number"
+          placeholder="Contact Number"
           type="number"
         />
-        {errors.mobile && <p className={styles.error}>{errors.mobile}</p>}
+        {errors.contactNumber && (
+          <p className={styles.error}>{errors.contactNumber}</p>
+        )}
 
         <input
           name="email"
