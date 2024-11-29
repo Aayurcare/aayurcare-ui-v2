@@ -21,7 +21,7 @@ const HomeDashboard = () => {
       <CustomizeHealthPlan />
       <WhyAayurCare />
       <ServicesOffer />
-      <VitalLinks />
+      {/* <VitalLinks /> */}
 
       <QnA />
       {/*{isMobile && (
