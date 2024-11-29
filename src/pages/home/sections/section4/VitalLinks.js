@@ -41,14 +41,6 @@ const FullCardSection = () => {
           "Your chance to be a hero. Discover the impact of giving blood and how you can save lives. Visit the website to find donation centers and get involved."
         }
       />
-
-      <CardItem
-        image={WHO}
-        title={"The World Health Organization (WHO)"}
-        description={
-          "Leading global health initiatives. Dedicated to worldwide healthcare, disease prevention, and well-being. Visit the website for valuable insights and global health updates          "
-        }
-      />
       <CardItem
         image={NACO}
         title={"National AIDS Control Organization"}

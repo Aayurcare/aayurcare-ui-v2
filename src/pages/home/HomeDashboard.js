@@ -22,7 +22,7 @@ const HomeDashboard = () => {
       <WhyAayurCare />
       <ServicesOffer />
       <VitalLinks />
-      <WordsOfTrust />
+
       <QnA />
       {/*{isMobile && (
         <SectionContainerLeft
